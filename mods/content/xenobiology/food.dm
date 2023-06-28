@@ -1,33 +1,29 @@
 /decl/recipe/slimetoast
 	display_name = "Slime Toast"
-	appliance = APPLIANCE_MIX | APPLIANCE_SKILLET
 	reagents = list(/decl/material/liquid/slimejelly = 5)
 	items = list(
-		/obj/item/chems/food/slice/bread = 1,
+		/obj/item/chems/food/slice/bread,
 	)
 	result = /obj/item/chems/food/jelliedtoast/slime
 
-/decl/recipe/jellydonut/slime
+/decl/recipe/slimedonut
 	display_name = "Slime Jelly Donut"
-	appliance = APPLIANCE_FRYER
 	reagents = list(/decl/material/liquid/slimejelly = 5, /decl/material/liquid/nutriment/sugar = 5)
 	items = list(
-		/obj/item/chems/food/dough = 1
+		/obj/item/chems/food/dough
 	)
 	result = /obj/item/chems/food/donut/slimejelly
 
 /decl/recipe/slimeburger
 	display_name = "Slime Burger"
-	appliance = APPLIANCE_MIX
 	reagents = list(/decl/material/liquid/slimejelly = 5)
 	items = list(
-		/obj/item/chems/food/bun = 1
+		/obj/item/chems/food/bun
 	)
 	result = /obj/item/chems/food/jellyburger/slime
 
 /decl/recipe/slimesandwich
 	display_name = "Slime Sandwich"
-	appliance = APPLIANCE_MIX
 	reagents = list(/decl/material/liquid/slimejelly = 5)
 	items = list(
 		/obj/item/chems/food/slice/bread = 2,
@@ -35,22 +31,21 @@
 	result = /obj/item/chems/food/jellysandwich/slime
 
 /decl/recipe/slimesoup
-	appliance = APPLIANCE_SAUCEPAN | APPLIANCE_POT
 	reagents = list(/decl/material/liquid/water = 10, /decl/material/liquid/slimejelly = 5)
 	items = list()
 	result = /obj/item/chems/food/slimesoup
 
-/obj/item/chems/food/jellysandwich/slime/Initialize()
-	.=..()
+/obj/item/chems/food/jellysandwich/slime/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/slimejelly, 5)
+	. = ..()
 
-/obj/item/chems/food/jelliedtoast/slime/Initialize()
-	.=..()
+/obj/item/chems/food/jelliedtoast/slime/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/slimejelly, 5)
+	. = ..()
 
-/obj/item/chems/food/jellyburger/slime/Initialize()
-	.=..()
+/obj/item/chems/food/jellyburger/slime/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/slimejelly, 5)
+	. = ..()
 
 /obj/item/chems/food/slimesoup
 	name = "slime soup"
@@ -60,10 +55,10 @@
 	bitesize = 5
 	eat_sound = 'sound/items/drink.ogg'
 
-/obj/item/chems/food/slimesoup/Initialize()
-	.=..()
+/obj/item/chems/food/slimesoup/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/slimejelly, 5)
 	reagents.add_reagent(/decl/material/liquid/water, 10)
+	. = ..()
 
 /obj/item/chems/food/donut/slimejelly
 	name = "jelly donut"
@@ -75,9 +70,9 @@
 	bitesize = 5
 	donut_state = "jdonut"
 
-/obj/item/chems/food/donut/slimejelly/Initialize()
-	.=..()
+/obj/item/chems/food/donut/slimejelly/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/slimejelly, 5)
+	. = ..()
 
 /obj/item/chems/food/mysterysoup/get_random_fillings()
 	. = ..() + list(list(

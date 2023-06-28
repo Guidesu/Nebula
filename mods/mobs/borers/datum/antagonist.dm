@@ -4,7 +4,7 @@
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB
 
 	mob_path = /mob/living/simple_animal/borer
-	welcome_text = "Use your Infest power to crawl into the ear of a host and fuse with their brain. You can only take control temporarily, and at risk of hurting your host, so be clever and careful; your host is encouraged to help you however they can. Talk to your fellow borers with :x."
+	welcome_text = "Click a target while on GRAB intent to crawl into their ear and infiltrate their brain. You can only take control temporarily, and at risk of hurting your host, so be clever and careful; your host is encouraged to help you however they can. Talk to your host with Say, and your fellow borers with ,z."
 	antag_indicator = "hudborer"
 	antaghud_indicator = "hudborer"
 
@@ -38,12 +38,12 @@
 		var/mob/living/carbon/human/host
 		for(var/mob/living/carbon/human/H in SSmobs.mob_list)
 			if(H.stat != DEAD && !H.has_brain_worms())
-				var/obj/item/organ/external/head = H.get_organ(BP_HEAD)
+				var/obj/item/organ/external/head = GET_EXTERNAL_ORGAN(H, BP_HEAD)
 				if(head && !BP_IS_PROSTHETIC(head))
 					host = H
 					break
 		if(istype(host))
-			var/obj/item/organ/external/head = host.get_organ(BP_HEAD)
+			var/obj/item/organ/external/head = GET_EXTERNAL_ORGAN(host, BP_HEAD)
 			if(head)
 				borer.host = host
 				LAZYDISTINCTADD(head.implants, borer)

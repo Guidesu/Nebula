@@ -1,8 +1,0 @@
-#ifndef MODPACK_HEARTH_CONTENT
-#define MODPACK_HEARTH_CONTENT
-#include "../psionics/_psionics.dme"
-#include "../../species/skrell/_skrell.dme"
-#include "hearth_content.dm"
-#include "sprite_overrides.dm"
-#include "aspects.dm"
-#endif

@@ -17,9 +17,9 @@
 		/obj/item/clustertool,
 		/obj/item/soap,
 		/obj/item/mop/advanced,
-		/obj/item/plunger,
+		/obj/item/plunger/unbreakable,
 		/obj/item/weldingtool/electric/mantid,
-		/obj/item/extinguisher,
+		/obj/item/chems/spray/extinguisher,
 		/obj/item/t_scanner,
 		/obj/item/scanner/gas,
 		/obj/item/scanner/health,
@@ -37,6 +37,7 @@
 		/obj/item/stack/material/rods/cyborg,
 		/obj/item/stack/material/strut/cyborg,
 		/obj/item/stack/tile/floor/cyborg,
+		/obj/item/stack/tile/roof/cyborg,
 		/obj/item/stack/material/cyborg/glass,
 		/obj/item/stack/material/cyborg/glass/reinforced,
 		/obj/item/stack/material/cyborg/fiberglass,
@@ -97,6 +98,7 @@
 		 /obj/item/stack/material/rods/cyborg,
 		 /obj/item/stack/material/strut/cyborg,
 		 /obj/item/stack/tile/floor/cyborg,
+		 /obj/item/stack/tile/roof/cyborg,
 		 /obj/item/stack/material/cyborg/glass/reinforced
 		))
 		var/obj/item/stack/stack = locate(thing) in equipment

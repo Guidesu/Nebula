@@ -18,8 +18,8 @@
 	// end TODO
 
 	var/mob/living/carbon/human/H = M
-	var/obj/item/organ/external/E = H.get_organ(BP_HEAD)
-	if(!E || E.is_stump())
+	var/obj/item/organ/external/E = GET_EXTERNAL_ORGAN(H, BP_HEAD)
+	if(!E)
 		to_chat(src, SPAN_WARNING("\The [H] does not have a head!"))
 		return
 	if(!H.should_have_organ(BP_BRAIN))
@@ -44,9 +44,11 @@
 	host.status_flags |= PASSEMOTES
 	forceMove(host)
 
-	for(var/obj/thing in hud_elements)
-		thing.alpha =        255
-		thing.invisibility = 0
+	var/datum/hud/borer/borer_hud = hud_used
+	if(istype(borer_hud))
+		for(var/obj/thing in borer_hud.borer_hud_elements)
+			thing.alpha =        255
+			thing.invisibility = 0
 
 	//Update their traitor status.
 	if(host.mind && !neutered)
@@ -54,7 +56,7 @@
 		borers.add_antagonist_mind(host.mind, 1, borers.faction_name, borers.faction_welcome)
 
 	if(istype(host, /mob/living/carbon/human))
-		var/obj/item/organ/I = H.get_organ(BP_BRAIN)
+		var/obj/item/organ/internal/I = GET_INTERNAL_ORGAN(H, BP_BRAIN)
 		if(!I) // No brain organ, so the borer moves in and replaces it permanently.
 			replace_brain()
 		else if(E) // If they're in normally, implant removal can get them out.

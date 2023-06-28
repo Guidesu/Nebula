@@ -8,13 +8,12 @@
 	syllables = list("-","=","+","_","|","/")
 	space_chance = 0
 	key = "|"
-	flags = RESTRICTED
+	flags = LANG_FLAG_RESTRICTED
 	shorthand = "KV"
 	machine_understands = FALSE
 	var/list/correct_mouthbits = list(
 		SPECIES_MANTID_ALATE,
-		SPECIES_MANTID_GYNE,
-		SPECIES_SERPENTID
+		SPECIES_MANTID_GYNE
 	)
 
 /decl/language/mantid/can_be_spoken_properly_by(var/mob/speaker)
@@ -53,11 +52,11 @@
 	speech_verb = "flashes"
 	ask_verb = "gleams"
 	exclaim_verb = "flares"
-	flags = RESTRICTED | NO_STUTTER | NONVERBAL
+	flags = LANG_FLAG_RESTRICTED | LANG_FLAG_NO_STUTTER | LANG_FLAG_NONVERBAL
 	shorthand = "KNV"
 
 #define MANTID_SCRAMBLE_CACHE_LEN 20
-/decl/language/mantid/nonvocal/scramble(var/input)
+/decl/language/mantid/nonvocal/scramble(mob/living/speaker, input, list/known_languages)
 	if(input in scramble_cache)
 		var/n = scramble_cache[input]
 		scramble_cache -= input
@@ -86,7 +85,7 @@
 	speech_verb = "flashes"
 	ask_verb = "gleams"
 	exclaim_verb = "flares"
-	flags = RESTRICTED | NO_STUTTER | NONVERBAL | HIVEMIND
+	flags = LANG_FLAG_RESTRICTED | LANG_FLAG_NO_STUTTER | LANG_FLAG_NONVERBAL | LANG_FLAG_HIVEMIND
 	shorthand = "KB"
 
 /decl/language/mantid/worldnet/check_special_condition(var/mob/living/carbon/other)

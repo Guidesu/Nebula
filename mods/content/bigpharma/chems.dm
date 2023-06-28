@@ -3,16 +3,16 @@
 
 /obj/item/chems/Initialize()
 	. = ..()
-	if(obfuscated_meds_type)
+	// Check area so stuff spawned for reference (atom info repository) isn't obfuscated
+	if(. != INITIALIZE_HINT_QDEL && obfuscated_meds_type && get_area(src))
 		set_extension(src, obfuscated_meds_type)
-	if(. != INITIALIZE_HINT_QDEL)
 		. = INITIALIZE_HINT_LATELOAD
 
 /obj/item/chems/LateInitialize()
 	. = ..()
 	handle_med_obfuscation(src)
 
-/obj/item/chems/examine(mob/user)
+/obj/item/chems/examine(mob/user, distance, infix, suffix)
 	. = ..()
 	var/datum/extension/obfuscated_medication/meds = get_extension(src, /datum/extension/obfuscated_medication)
 	if(meds && user && (user.skill_check(SKILL_CHEMISTRY, meds.skill_threshold) || user.skill_check(SKILL_MEDICAL, meds.skill_threshold)))

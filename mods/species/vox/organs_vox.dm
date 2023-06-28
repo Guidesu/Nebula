@@ -20,7 +20,7 @@
 	color = "#0033cc"
 
 /obj/item/organ/internal/eyes/vox
-	eye_icon = 'mods/species/vox/icons/body/eyes.dmi'
+	eye_icon = 'mods/species/vox/icons/body/soldier/eyes.dmi'
 	color = "#0033cc"
 
 /obj/item/organ/internal/stomach/vox
@@ -132,7 +132,7 @@
 						mat_stack.add(taking_sheets)
 						sheets -= taking_sheets
 						updated_stacks = TRUE
-						
+
 				// Create new stacks if needed.
 				if(sheets)
 					M.create_object(src, sheets)
@@ -153,11 +153,9 @@
 	parent_organ = BP_HEAD
 	icon_state = "cortical-stack"
 	organ_tag = BP_STACK
-	status = ORGAN_PROSTHETIC
-	vital = 1
+	organ_properties = ORGAN_PROP_PROSTHETIC
 	origin_tech = @"{'biotech':4,'materials':4,'magnets':2,'programming':3}"
 	relative_size = 10
-	var/invasive = 1
 
 	var/ownerckey
 	var/default_language
@@ -221,7 +219,7 @@
 	do_backup()
 
 /obj/item/organ/internal/voxstack/on_remove_effects(mob/living/last_owner)
-	var/obj/item/organ/external/head = last_owner.get_organ(parent_organ)
+	var/obj/item/organ/external/head = GET_EXTERNAL_ORGAN(last_owner, parent_organ)
 	last_owner.visible_message(SPAN_DANGER("\The [src] rips gaping holes in \the [last_owner]'s [head.name] as it is torn loose!"))
 	head.take_external_damage(rand(15,20))
 	for(var/obj/item/organ/internal/O in head.contents)
