@@ -1,10 +1,10 @@
 /decl/department/civilian
-	name = "Civilian"
+	name = "Association of Frontiersmen"
 	display_priority = 1
 	display_color = "#dddddd"
 
 /decl/department/engineering
-	name = "Engineering"
+	name = "Steral-Astral Techno Syndicate"
 	announce_channel = "Engineering"
 	colour = "#ffa500"
 	display_priority = 2
@@ -17,12 +17,12 @@
 	department = /decl/department/engineering
 
 /decl/department/medical
-	name = "Medical"
+	name = "Aetheris Biomedical Solutions""
 	goals = list(/datum/goal/department/medical_fatalities)
 	announce_channel = "Medical"
-	colour = "#008000"
+	colour = "#d31c7b"
 	display_priority = 3
-	display_color = "#ffeef0"
+	display_color = "#df6da6"
 
 /obj/item/robot_module/medical
 	associated_department = /decl/department/medical
@@ -31,10 +31,10 @@
 	department = /decl/department/medical
 
 /decl/department/science
-	name = "Science"
+	name = "Aetheris Scientific Solutions"
 	goals = list(/datum/goal/department/extract_slime_cores)
 	announce_channel = "Science"
-	colour = "#a65ba6"
+	colour = "#9a209a"
 	display_color = "#e79fff"
 
 /obj/item/robot_module/research
@@ -44,10 +44,10 @@
 	department = /decl/department/science
 
 /decl/department/command
-	name = "Command"
-	colour = "#800080"
+	name = "Syndicate Council"
+	colour = "#305cbc"
 	display_priority = 4
-	display_color = "#ccccff"
+	display_color = "#4a4adb"
 	goals = list(/datum/goal/department/paperwork/tradeship)
 
 /obj/machinery/network/pager
