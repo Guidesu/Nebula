@@ -1,5 +1,6 @@
 /datum/map_template/ruin/away_site/tanker
 	name = "tanker shuttle"
+	id = "tanker_shuttle"
 	description = "Generic tanker shuttle."
 	suffixes = list("tanker/tanker.dmm")
 	cost = INFINITY

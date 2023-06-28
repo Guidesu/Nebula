@@ -10,6 +10,7 @@
 	hard_cap = 1
 	hard_cap_round = 3
 	min_player_age = 18
+	id_type = /obj/item/card/id/syndicate
 	faction = "paramount"
 	default_outfit = /decl/hierarchy/outfit/paramount
 
@@ -21,7 +22,6 @@
 	shoes =   /obj/item/clothing/shoes/jackboots
 	back =    /obj/item/storage/backpack/satchel
 	gloves =  /obj/item/clothing/gloves/color/grey
-	id_type = /obj/item/card/id/syndicate
 
 /decl/special_role/paramount/equip(var/mob/living/carbon/human/player)
 	. = ..()

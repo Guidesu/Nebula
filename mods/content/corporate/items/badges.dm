@@ -1,9 +1,7 @@
 /obj/item/storage/box/holobadgeNT
 	name = "corporate holobadge box"
 	desc = "A box containing corporate security holobadges."
-
-/obj/item/storage/box/holobadgeNT/WillContain()
-	return list(
+	startswith = list(
 		/obj/item/clothing/accessory/badge/holo/NT = 4,
 		/obj/item/clothing/accessory/badge/holo/NT/cord = 2
 	)

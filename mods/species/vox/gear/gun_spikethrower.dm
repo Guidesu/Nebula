@@ -50,8 +50,7 @@
 	fire_sound = 'sound/weapons/spike.ogg'
 
 /obj/item/gun/launcher/alien/spikethrower/on_update_icon()
-	. = ..()
-	icon_state = "[get_world_inventory_state()][clamp(ammo,0,3)]"
+	icon_state = "[get_world_inventory_state()][Clamp(ammo,0,3)]"
 
 /obj/item/arrow/quill
 	name = "vox quill"
@@ -59,4 +58,3 @@
 	icon_state = "quill"
 	item_state = "quill"
 	throwforce = 5
-	material = /decl/material/solid/leather/chitin

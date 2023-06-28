@@ -147,7 +147,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/tracker,
+/obj/machinery/power/tracker{
+	id = "ZHSolarsWest"
+	},
 /turf/simulated/floor/reinforced,
 /area/space)
 "aC" = (
@@ -365,7 +367,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/tracker,
+/obj/machinery/power/tracker{
+	id = "ZHSolarsEast"
+	},
 /turf/simulated/floor/reinforced,
 /area/space)
 "aU" = (
@@ -1108,12 +1112,10 @@
 /obj/machinery/atmospherics/omni/filter{
 	dir = 4
 	},
-/obj/abstract/landmark/allowed_leak,
 /turf/simulated/floor/plating,
 /area/lar_maria/atmos)
 "dr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
-/obj/abstract/landmark/allowed_leak,
 /turf/simulated/floor/plating,
 /area/lar_maria/atmos)
 "ds" = (
@@ -1179,12 +1181,10 @@
 /area/lar_maria/atmos)
 "dD" = (
 /obj/machinery/atmospherics/binary/oxyregenerator,
-/obj/abstract/landmark/allowed_leak,
 /turf/simulated/floor/plating,
 /area/lar_maria/atmos)
 "dE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
-/obj/abstract/landmark/allowed_leak,
 /turf/simulated/floor/plating,
 /area/lar_maria/atmos)
 "dF" = (
@@ -1235,7 +1235,7 @@
 /area/lar_maria/library)
 "dM" = (
 /obj/structure/table,
-/obj/machinery/faxmachine,
+/obj/machinery/photocopier/faxmachine,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
 	dir = 8;
@@ -1494,7 +1494,7 @@
 /turf/simulated/floor/tiled,
 /area/lar_maria/office)
 "eE" = (
-/obj/structure/filing_cabinet/chestdrawer,
+/obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/tiled,
 /area/lar_maria/office)
 "eF" = (
@@ -2316,7 +2316,7 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/mess_hall)
 "hm" = (
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/stove,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/mess_hall)
 "hn" = (
@@ -2495,7 +2495,7 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/mess_hall)
 "hJ" = (
-/obj/machinery/cooker/fryer,
+/obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/mess_hall)
 "hK" = (
@@ -2618,7 +2618,7 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/mess_hall)
 "if" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/mess_hall)
 "ig" = (
@@ -2792,7 +2792,7 @@
 /area/lar_maria/mess_hall)
 "iE" = (
 /obj/structure/table/marble,
-/obj/machinery/cooker/cereal,
+/obj/machinery/appliance/mixer/cereal,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/mess_hall)
 "iF" = (
@@ -3080,7 +3080,7 @@
 /turf/simulated/open,
 /area/lar_maria/solar_control)
 "nb" = (
-/obj/structure/tank_rack/oxygen,
+/obj/structure/dispenser/oxygen,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -3094,13 +3094,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/lar_maria/solar_control)
-"ok" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 4
-	},
-/obj/abstract/landmark/allowed_leak,
-/turf/simulated/floor/plating,
-/area/lar_maria/atmos)
 "pb" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -3163,7 +3156,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/obj/structure/mirror{
+/obj/item/storage/mirror{
 	pixel_x = 30
 	},
 /obj/machinery/alarm{
@@ -3177,7 +3170,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/obj/structure/mirror{
+/obj/item/storage/mirror{
 	pixel_x = 30
 	},
 /obj/random/trash,
@@ -3189,36 +3182,17 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
-/obj/structure/mirror{
+/obj/item/storage/mirror{
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/head_f)
-"Ag" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/abstract/landmark/allowed_leak,
-/turf/simulated/floor/plating,
-/area/lar_maria/atmos)
 "DG" = (
 /obj/machinery/computer/modular{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/lar_maria/office)
-"FZ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/abstract/landmark/allowed_leak,
-/turf/simulated/floor/plating,
-/area/lar_maria/atmos)
-"YS" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10
-	},
-/obj/abstract/landmark/allowed_leak,
-/turf/simulated/floor/plating,
-/area/lar_maria/atmos)
 
 (1,1,1) = {"
 aa
@@ -22500,7 +22474,7 @@ pb
 ci
 cA
 cR
-ok
+cR
 dB
 tb
 bx
@@ -22701,7 +22675,7 @@ bx
 bM
 ci
 cn
-YS
+cl
 dn
 dB
 bM
@@ -22904,7 +22878,7 @@ bN
 ci
 cn
 cn
-ok
+cR
 dC
 dO
 bx
@@ -23510,7 +23484,7 @@ bQ
 ck
 bQ
 cU
-Ag
+cU
 bQ
 dR
 bG
@@ -24115,7 +24089,7 @@ bx
 qb
 cl
 cB
-FZ
+cB
 dp
 dF
 ub

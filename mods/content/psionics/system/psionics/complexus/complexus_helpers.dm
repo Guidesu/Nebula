@@ -16,7 +16,7 @@
 
 /datum/psi_complexus/proc/get_armour(var/armourtype)
 	if(use_psi_armour && can_use_passive())
-		return round(clamp(clamp(4 * rating, 0, 20) * get_rank(SSpsi.armour_faculty_by_type[armourtype]), 0, 100) * (stamina/max_stamina))
+		return round(Clamp(Clamp(4 * rating, 0, 20) * get_rank(SSpsi.armour_faculty_by_type[armourtype]), 0, 100) * (stamina/max_stamina))
 	else
 		return 0
 
@@ -88,13 +88,12 @@
 	if(ishuman(owner))
 		var/mob/living/carbon/human/pop = owner
 		if(pop.should_have_organ(BP_BRAIN))
-			var/obj/item/organ/internal/sponge = GET_INTERNAL_ORGAN(pop, BP_BRAIN)
+			var/obj/item/organ/internal/brain/sponge = pop.get_organ(BP_BRAIN)
 			if(sponge && sponge.damage >= sponge.max_damage)
-				var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(pop, sponge.parent_organ)
-				if(affecting)
+				var/obj/item/organ/external/affecting = pop.get_organ(sponge.parent_organ)
+				if(affecting && !affecting.is_stump())
 					affecting.dismember(0, DISMEMBER_METHOD_BLUNT)
-					if(sponge)
-						qdel(sponge)
+					if(sponge) qdel(sponge)
 
 /datum/psi_complexus/proc/reset()
 	aura_color = initial(aura_color)

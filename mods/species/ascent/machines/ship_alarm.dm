@@ -19,10 +19,9 @@ MANTIDIFY(/obj/machinery/alarm, "mantid thermostat", "atmospherics")
 
 /obj/machinery/alarm/ascent/Initialize()
 	. = ..()
-	var/decl/material/gas_mat = GET_DECL(/decl/material/gas/methyl_bromide)
-	TLV[gas_mat.gas_name] = list(16, 19, 135, 140)
-	gas_mat = GET_DECL(/decl/material/gas/methane)
-	TLV[gas_mat.gas_name] = list(-1.0, -1.0, 5, 10)
+	TLV[/decl/material/gas/methyl_bromide] = list(16, 19, 135, 140)
+	TLV[/decl/material/gas/methane] = list(-1.0, -1.0, 5, 10)
+
 
 /obj/item/frame/air_alarm/ascent
 	name = "air alarm frame"
@@ -30,9 +29,9 @@ MANTIDIFY(/obj/machinery/alarm, "mantid thermostat", "atmospherics")
 	build_machine_type = /obj/machinery/alarm/ascent
 
 /obj/item/frame/air_alarm/ascent/kit
-	name = "mantid air alarm kit"
-	desc = "An all-in-one air alarm kit, comes preassembled."
 	fully_construct = TRUE
+	name = "air alarm kit"
+	desc = "An all-in-one air alarm kit, comes preassembled."
 
 /datum/fabricator_recipe/engineering/airalarm_kit/ascent
 	path = /obj/item/frame/air_alarm/ascent/kit

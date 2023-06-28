@@ -47,7 +47,7 @@
 
 /obj/item/implant/psi_control/meltdown()
 	if(!malfunction)
-		overload = max_overload
+		overload = 100
 		if(imp_in)
 			for(var/thing in SSpsi.psi_monitors)
 				var/obj/machinery/psi_monitor/monitor = thing
@@ -76,20 +76,19 @@
 			var/overload_amount = FLOOR(stress/10)
 			if(overload_amount > 0)
 				overload += overload_amount
-				if(overload >= max_overload)
+				if(overload >= 100)
 					if(imp_in)
 						to_chat(imp_in, SPAN_DANGER("Your psi dampener overloads violently!"))
 					meltdown()
 					update_functionality()
 					return
 				if(imp_in)
-					switch(overload / max_overload)
-						if(0.25 to 0.5)
-							to_chat(imp_in, SPAN_WARNING("You feel your psi dampener heating up..."))
-						if(0.5 to 0.75)
-							to_chat(imp_in, SPAN_WARNING("Your psi dampener is uncomfortably hot..."))
-						if(0.75 to 1)
-							to_chat(imp_in, SPAN_DANGER("Your psi dampener is searing hot!"))
+					if(overload >= 75 && overload < 100)
+						to_chat(imp_in, SPAN_DANGER("Your psi dampener is searing hot!"))
+					else if(overload >= 50 && overload < 75)
+						to_chat(imp_in, SPAN_WARNING("Your psi dampener is uncomfortably hot..."))
+					else if(overload >= 25 && overload < 50)
+						to_chat(imp_in, SPAN_WARNING("You feel your psi dampener heating up..."))
 
 		// If all we're doing is logging the incident then just pass back stress without changing it.
 		if(source && source == imp_in && implanted)

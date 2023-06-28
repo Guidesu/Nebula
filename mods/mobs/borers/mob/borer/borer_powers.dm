@@ -25,7 +25,7 @@
 		if(!silent)
 			to_chat(src, SPAN_NOTICE("You are feeling far too docile to perform this action."))
 		return FALSE
-	if(check_last_special && is_on_special_ability_cooldown())
+	if(check_last_special && world.time < last_special)
 		if(!silent)
 			to_chat(src, SPAN_NOTICE("You cannot perform this action so soon after the last."))
 		return FALSE
@@ -58,13 +58,13 @@
 		src.mind.assigned_special_role = "Borer Husk"
 		src.mind.transfer_to(host)
 
-	H.make_husked()
+	H.ChangeToHusk()
 
 	var/obj/item/organ/internal/borer/B = new(H)
 	if(islist(chemical_types))
 		B.chemical_types = chemical_types.Copy()
 
-	var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, BP_HEAD)
+	var/obj/item/organ/external/affecting = H.get_organ(BP_HEAD)
 	LAZYREMOVE(affecting.implants, src)
 
 	var/s2h_id = src.computer_id

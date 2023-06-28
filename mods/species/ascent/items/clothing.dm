@@ -22,7 +22,10 @@
 	desc = "An alien facemask with chunky gas filters and a breathing valve."
 	filter_water = TRUE
 	icon = 'mods/species/ascent/icons/clothing/mask.dmi'
-	sprite_sheets = list(BODYTYPE_MANTID_LARGE = 'mods/species/ascent/icons/clothing/mask_gyne.dmi')
+	sprite_sheets = list(
+		BODYTYPE_SNAKE =        'mods/species/ascent/icons/clothing/mask_serpentid.dmi',
+		BODYTYPE_MANTID_LARGE = 'mods/species/ascent/icons/clothing/mask_gyne.dmi'
+	)
 	bodytype_equip_flags = BODY_FLAG_GYNE | BODY_FLAG_ALATE
 	filtered_gases = list(
 		/decl/material/gas/nitrous_oxide,
@@ -32,6 +35,19 @@
 		/decl/material/gas/methane
 	)
 	flags_inv = 0
+
+/obj/item/clothing/mask/gas/ascent/monarch
+	name = "serpentid facemask"
+	desc = "An alien facemask with chunky gas filters and a breathing valve."
+	filtered_gases = list(
+		/decl/material/gas/nitrous_oxide,
+		/decl/material/gas/chlorine,
+		/decl/material/gas/ammonia,
+		/decl/material/gas/carbon_monoxide,
+		/decl/material/gas/methyl_bromide,
+		/decl/material/gas/methane
+	)
+	bodytype_equip_flags = BODY_FLAG_SNAKE
 
 /obj/item/clothing/shoes/magboots/ascent
 	name = "mantid mag-claws"
@@ -55,10 +71,13 @@
 /obj/item/clothing/suit/storage/ascent
 	name = "mantid gear harness"
 	desc = "A complex tangle of articulated cables and straps."
-	bodytype_equip_flags = BODY_FLAG_GYNE | BODY_FLAG_ALATE
+	bodytype_equip_flags = BODY_FLAG_GYNE | BODY_FLAG_ALATE | BODY_FLAG_SNAKE
 	icon_state = ICON_STATE_WORLD
 	icon = 'mods/species/ascent/icons/clothing/under_harness.dmi'
-	sprite_sheets = list(BODYTYPE_MANTID_LARGE = 'mods/species/ascent/icons/clothing/under_harness_gyne.dmi')
+	sprite_sheets = list(
+		BODYTYPE_MANTID_LARGE = 'mods/species/ascent/icons/clothing/under_harness_gyne.dmi',
+		BODYTYPE_SNAKE =        'mods/species/ascent/icons/clothing/under_harness_serpentid.dmi'
+	)
 	body_parts_covered = 0
 	slot_flags = SLOT_OVER_BODY | SLOT_LOWER_BODY
 	allowed = list(

@@ -5,7 +5,6 @@
 	detail_color = null
 
 /obj/item/card/id/foundation_civilian/on_update_icon()
-	SHOULD_CALL_PARENT(FALSE)
 	return
 
 /obj/item/card/id/foundation
@@ -38,7 +37,6 @@
 				to_chat(M, SPAN_WARNING("There is a psionic compulsion surrounding \the [src] in a flicker of indescribable light."))
 
 /obj/item/card/id/foundation/on_update_icon()
-	SHOULD_CALL_PARENT(FALSE)
 	return
 
 /obj/item/card/id/foundation/Initialize()

@@ -17,6 +17,9 @@
 
 /decl/psionic_power/proc/invoke(var/mob/living/user, var/atom/target)
 
+	if(is_abstract())
+		return FALSE
+
 	if(!user.psi)
 		return FALSE
 
@@ -40,6 +43,8 @@
 	return TRUE
 
 /decl/psionic_power/proc/handle_post_power(var/mob/living/user, var/atom/target)
+	if(is_abstract())
+		return
 	if(cooldown)
 		user.psi.set_cooldown(cooldown)
 	if(admin_log && ismob(user) && ismob(target))

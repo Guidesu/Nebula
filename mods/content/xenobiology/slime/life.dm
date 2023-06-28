@@ -3,6 +3,7 @@
 	if(. && stat != DEAD)
 		handle_turf_contents()
 		handle_local_conditions()
+		handle_nutrition()
 		if(feeding_on)
 			slime_feed()
 		ingested.metabolize()
@@ -50,7 +51,7 @@
 			adjustBruteLoss(-1)
 
 /mob/living/slime/proc/handle_turf_contents()
-	// If we're standing on top of a dead mob or small items, we can
+	// If we're standing on top of a dead mob or small items, we can 
 	// ingest it (or just melt it a little if we're too small)
 	// Also helps to keep our cell tidy!
 	if(!length(loc?.contents))
@@ -80,7 +81,7 @@
 	if(length(contents) != last_contents_length)
 		queue_icon_update()
 
-/mob/living/slime/handle_nutrition_and_hydration()
+/mob/living/slime/proc/handle_nutrition()
 
 	adjust_nutrition(-(0.1 + 0.05 * is_adult))
 
@@ -97,7 +98,7 @@
 					adjust_nutrition(M.eaten_by_slime(src))
 					queue_icon_update()
 				break
-
+			
 			if(istype(AM, /obj/item/remains))
 				if(prob(5))
 					adjust_nutrition(rand(2,3))
@@ -127,9 +128,7 @@
 		adjust_nutrition(-20)
 		amount_grown++
 
-	..()
-
-/mob/living/slime/get_max_nutrition() // Can't go above it
+/mob/living/slime/proc/get_max_nutrition() // Can't go above it
 	. = is_adult ? 1200 : 1000
 
 /mob/living/slime/proc/get_grow_nutrition() // Above it we grow, below it we can eat

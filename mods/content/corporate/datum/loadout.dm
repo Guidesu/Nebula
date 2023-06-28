@@ -15,7 +15,7 @@
 
 /decl/loadout_option/accessory/armband_nt
 	name = "corporate armband"
-	path = /obj/item/clothing/accessory/armband/whitegreen
+	path = /obj/item/clothing/accessory/armband/whitered
 
 /decl/loadout_option/suit/labcoat_corp
 	name = "labcoat, corporate colors"
@@ -23,7 +23,7 @@
 	flags = GEAR_HAS_TYPE_SELECTION
 
 /decl/loadout_option/uniform/corporate
-	name = "corporate uniform selection"
+	namename = "corporate uniform selection"
 	path = /obj/item/clothing/under
 
 /decl/loadout_option/uniform/corporate/get_gear_tweak_options()
@@ -93,7 +93,7 @@
 
 /decl/loadout_option/suit/wintercoat_dais
 	name = "winter coat, DAIS"
-	path = /obj/item/clothing/suit/storage/toggle/wintercoat/dais
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/dais
 
 /decl/loadout_option/suit/leather/get_gear_tweak_options()
 	. = ..()

@@ -24,7 +24,7 @@
 		return custom_emote(1, copytext(message,2))
 
 	var/decl/language/L = parse_language(message)
-	if(L && L.flags & LANG_FLAG_HIVEMIND)
+	if(L && L.flags & HIVEMIND)
 		L.broadcast(src,trim(copytext(message,3)),src.truename)
 		return
 

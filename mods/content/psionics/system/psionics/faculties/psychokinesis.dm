@@ -2,7 +2,7 @@
 	id = PSI_PSYCHOKINESIS
 	name = "Psychokinesis"
 	associated_intent = I_GRAB
-	armour_types = list(ARMOR_MELEE, ARMOR_BULLET)
+	armour_types = list("melee", "bullet")
 
 /decl/psionic_power/psychokinesis
 	faculty = PSI_PSYCHOKINESIS
@@ -77,17 +77,17 @@
 			var/obj/item/psychic_power/telekinesis/tk = new(user)
 			if(tk.set_focus(target))
 				tk.sparkle()
-				user.visible_message(SPAN_NOTICE("\The [user] reaches out."))
+				user.visible_message("<span class='notice'>\The [user] reaches out.</span>")
 				return tk
 		else if(istype(target, /obj/structure))
-			user.visible_message(SPAN_NOTICE("\The [user] makes a strange gesture."))
+			user.visible_message("<span class='notice'>\The [user] makes a strange gesture.</span>")
 			var/obj/O = target
-			O.attack_hand(user) // We bypass adjacency checks due to telekinetics.
+			O.attack_hand(user)
 			return TRUE
 		else if(istype(target, /obj/machinery))
 			for(var/mtype in valid_machine_types)
 				if(istype(target, mtype))
 					var/obj/machinery/machine = target
-					machine.attack_hand(user) // We bypass adjacency checks due to telekinetics.
+					machine.attack_hand(user)
 					return TRUE
 	return FALSE

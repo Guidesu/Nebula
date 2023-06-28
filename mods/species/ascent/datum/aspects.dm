@@ -1,18 +1,18 @@
-/decl/aspect/build_references()
+/decl/aspect/Initialize()
 	. = ..()
 	LAZYINITLIST(blocked_species)
+	blocked_species |= SPECIES_SERPENTID
 	blocked_species |= SPECIES_MANTID_ALATE
 	blocked_species |= SPECIES_MANTID_GYNE
 	blocked_species |= SPECIES_MANTID_NYMPH
 
-/decl/aspect/ascent/build_references()
+/decl/aspect/ascent/Initialize()
 	. = ..()
-	blocked_species = null
-	permitted_species = list(
-		SPECIES_MANTID_ALATE,
-		SPECIES_MANTID_GYNE,
-		SPECIES_MANTID_NYMPH
-	)
+	blocked_species = global.all_species.Copy()
+	blocked_species -= SPECIES_SERPENTID
+	blocked_species -= SPECIES_MANTID_ALATE
+	blocked_species -= SPECIES_MANTID_GYNE
+	blocked_species -= SPECIES_MANTID_NYMPH
 
 // Modifies the exosuit that you spawn with.
 /decl/aspect/ascent/suit_upgrade

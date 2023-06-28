@@ -6,7 +6,7 @@
 	exclaim_verb = "rustles"
 	colour = "soghun"
 	key = "q"
-	flags = LANG_FLAG_RESTRICTED
+	flags = RESTRICTED
 	syllables = list("hs","zt","kr","st","sh")
 	shorthand = "RT"
 	machine_understands = FALSE

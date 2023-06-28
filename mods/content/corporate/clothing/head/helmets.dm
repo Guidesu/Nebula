@@ -7,7 +7,6 @@
 	desc = "A helmet with 'PRIVATE SECURITY' printed on the back in cyan lettering."
 	icon_state = ICON_STATE_WORLD
 	icon = 'mods/content/corporate/icons/clothing/head/pcrc.dmi'
-
 /obj/item/clothing/head/helmet/corp/nt/guard
 	starting_accessories = list(/obj/item/clothing/accessory/armor/helmcover/corp)
 

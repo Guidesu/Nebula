@@ -22,18 +22,18 @@
 /turf/simulated/floor/plating,
 /area/icarus/vessel)
 "ai" = (
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/simulated/floor/plating,
 /area/icarus/vessel)
 "aj" = (
 /turf/simulated/floor/wood,
 /area/icarus/vessel)
 "ak" = (
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/simulated/floor/wood,
 /area/icarus/vessel)
 "al" = (
-/obj/structure/flora/bush/palebush,
+/obj/structure/flora/ausbushes/palebush,
 /turf/exterior/wildgrass,
 /area/icarus/open)
 "am" = (
@@ -82,7 +82,7 @@
 /turf/simulated/floor/wood,
 /area/icarus/vessel)
 "ax" = (
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/exterior/wildgrass,
 /area/icarus/open)
 "ay" = (
@@ -123,11 +123,11 @@
 /area/icarus/vessel)
 "aG" = (
 /obj/machinery/light,
-/obj/structure/filing_cabinet/tall,
+/obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/floor/wood,
 /area/icarus/vessel)
 "aH" = (
-/obj/structure/filing_cabinet/tall,
+/obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/floor/wood,
 /area/icarus/vessel)
 "aI" = (
@@ -298,7 +298,7 @@
 /area/icarus/vessel)
 "bn" = (
 /obj/structure/noticeboard{
-	default_pixel_y = -25
+	pixel_y = -25
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4;
@@ -339,7 +339,7 @@
 /area/icarus/vessel)
 "bu" = (
 /obj/machinery/door/firedoor,
-/obj/structure/sign/department/greencross{
+/obj/structure/sign/greencross{
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
@@ -440,7 +440,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/stove,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -450,7 +450,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/machinery/cooker/fryer,
+/obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
 /area/icarus/vessel)
 "bN" = (
@@ -682,7 +682,7 @@
 "cx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/sign/department/greencross{
+/obj/structure/sign/greencross{
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
@@ -860,7 +860,7 @@
 /turf/simulated/floor/tiled,
 /area/icarus/open)
 "cZ" = (
-/obj/machinery/sleeper{
+/obj/machinery/sleeper/standard{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -1149,7 +1149,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/abstract/landmark/allowed_leak,
 /turf/simulated/floor/tiled,
 /area/icarus/open)
 "dX" = (
@@ -1268,7 +1267,7 @@
 /turf/simulated/floor/tiled/white,
 /area/icarus/open)
 "ep" = (
-/obj/structure/filing_cabinet/tall,
+/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/icarus/open)
@@ -1313,7 +1312,7 @@
 /turf/simulated/floor/tiled,
 /area/icarus/open)
 "ey" = (
-/obj/structure/filing_cabinet/tall,
+/obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/floor/tiled,
 /area/icarus/open)
 "ez" = (
@@ -1457,7 +1456,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "eS" = (
@@ -1489,7 +1488,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "eV" = (
@@ -1695,7 +1694,7 @@
 /area/icarus/open)
 "fs" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "ft" = (
@@ -1997,7 +1996,6 @@
 "gy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/abstract/landmark/allowed_leak,
 /turf/simulated/floor/plating,
 /area/icarus/vessel)
 "gz" = (
@@ -2098,7 +2096,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/abstract/landmark/allowed_leak,
 /turf/simulated/floor/plating,
 /area/icarus/open)
 "gR" = (
@@ -2386,9 +2383,6 @@
 	dir = 4;
 	id_tag = "d1starboardnacelle"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 4
-	},
 /turf/simulated/floor/reinforced,
 /area/icarus/vessel)
 "hH" = (
@@ -2531,15 +2525,13 @@
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "id" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
-	},
+/obj/machinery/atmospherics/unary/engine,
 /turf/simulated/wall/r_wall,
 /area/icarus/open)
 "ie" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "if" = (
@@ -2548,7 +2540,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "ig" = (
@@ -2573,7 +2565,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "ij" = (
@@ -2612,7 +2604,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/material/ore/slag,
+/obj/item/ore/slag,
 /turf/unsimulated/beach/sand,
 /area/icarus/open)
 "io" = (
@@ -2641,13 +2633,13 @@
 	dir = 1;
 	pixel_y = 16
 	},
-/obj/structure/mirror{
+/obj/item/storage/mirror{
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/icarus/vessel)
 "nb" = (
-/obj/structure/mirror{
+/obj/item/storage/mirror{
 	pixel_x = 30
 	},
 /obj/structure/hygiene/sink{
@@ -2657,7 +2649,7 @@
 /turf/simulated/floor/tiled/white,
 /area/icarus/vessel)
 "ob" = (
-/obj/structure/mirror{
+/obj/item/storage/mirror{
 	pixel_x = -30
 	},
 /obj/structure/hygiene/sink{
@@ -2669,19 +2661,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/icarus/vessel)
-"rK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/abstract/landmark/allowed_leak,
-/turf/simulated/floor/tiled,
-/area/icarus/open)
-"sK" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 4
-	},
-/obj/abstract/landmark/allowed_leak,
-/turf/simulated/floor/plating,
-/area/icarus/open)
 
 (1,1,1) = {"
 aa
@@ -22029,7 +22008,7 @@ en
 en
 ei
 et
-sK
+hD
 eA
 hX
 et
@@ -22145,7 +22124,7 @@ dD
 dK
 dD
 dD
-rK
+dD
 ee
 ei
 ei
@@ -22228,7 +22207,7 @@ aq
 gR
 hd
 eA
-sK
+hD
 et
 aq
 hD
@@ -25781,7 +25760,7 @@ cf
 dL
 dY
 dD
-rK
+dD
 eA
 ei
 ei
