@@ -36,7 +36,7 @@
 	total_positions = -1
 	spawn_positions = -1
 	economic_power = 1
-    alt_titles = list(
+	alt_titles = list(
         "General Supervisor",
         "Galley Manager",
         "Head Chef",

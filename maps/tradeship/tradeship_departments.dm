@@ -17,7 +17,7 @@
 	department = /decl/department/engineering
 
 /decl/department/medical
-	name = "Aetheris Biomedical Solutions""
+	name = "Aetheris Biomedical Solutions"
 	goals = list(/datum/goal/department/medical_fatalities)
 	announce_channel = "Medical"
 	colour = "#d31c7b"
