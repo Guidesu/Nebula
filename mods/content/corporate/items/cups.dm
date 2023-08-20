@@ -1,6 +1,6 @@
 /obj/item/chems/drinks/glass2/coffeecup/NT
 	name = "\improper NT coffee cup"
-	desc = "A red NanoTrasen coffee cup."
+	desc = "A red Syndicate coffee cup."
 	base_icon = "coffeecup_NT"
 	icon_state = "coffeecup_NT"
 	base_name = "\improper NT cup"

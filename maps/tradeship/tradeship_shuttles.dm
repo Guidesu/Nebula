@@ -21,30 +21,30 @@
 //In case multiple shuttles can dock at a location,
 //subtypes can be used to hold the shuttle-specific data
 /obj/effect/shuttle_landmark/docking_arm_starboard
-	name = "Tradeship Starboard-side Docking Arm"
+	name = "Hope Starboard-side Docking Arm"
 	docking_controller = "tradeship_starboard_dock"
 
 /obj/effect/shuttle_landmark/docking_arm_starboard/rescue
 	landmark_tag = "nav_tradeship_starboard_dock_rescue"
 
 /obj/effect/shuttle_landmark/docking_arm_port
-	name = "Tradeship Port-side Docking Arm"
+	name = "Hope Port-side Docking Arm"
 	docking_controller = "tradeship_dock_port"
 
 /obj/effect/shuttle_landmark/docking_arm_port/shuttle
 	landmark_tag = "nav_tradeship_port_dock_shuttle"
 
 /obj/effect/shuttle_landmark/below_deck_bow
-	name = "Near CSV Tradeship Bow"
+	name = "Near ICSS Hope Bow"
 	landmark_tag = "nav_tradeship_below_bow"
 
 /obj/effect/shuttle_landmark/below_deck_starboardastern
-	name = "Near CSV Tradeship Starboard Astern"
+	name = "Near ICSS Hope Starboard Astern"
 	landmark_tag = "nav_tradeship_below_starboardastern"
 
 // Essentially a bare platform that moves up and down.
 /obj/abstract/turbolift_spawner/tradeship
-	name = "Tradeship cargo elevator placeholder"
+	name = "Hope cargo elevator placeholder"
 	icon = 'icons/obj/turbolift_preview_nowalls_4x4.dmi'
 	depth = 4
 	lift_size_x = 3

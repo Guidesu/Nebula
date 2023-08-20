@@ -2,7 +2,7 @@ var/global/list/tradeship_paperwork_spawn_turfs = list()
 var/global/list/tradeship_paperwork_end_areas = list()
 
 /obj/abstract/landmark/paperwork_spawn_tradeship
-	name = "Tradeship Paperwork Goal Spawn Point"
+	name = "Hope Paperwork Goal Spawn Point"
 
 /obj/abstract/landmark/paperwork_spawn_tradeship/Initialize()
 	..()
@@ -12,7 +12,7 @@ var/global/list/tradeship_paperwork_end_areas = list()
 	return INITIALIZE_HINT_QDEL
 
 /obj/abstract/landmark/paperwork_finish_tradeship
-	name = "Tradeship Paperwork Goal Finish Point"
+	name = "Hope Paperwork Goal Finish Point"
 
 /obj/abstract/landmark/paperwork_finish_tradeship/Initialize()
 	..()
@@ -34,5 +34,5 @@ var/global/list/tradeship_paperwork_end_areas = list()
 	return global.tradeship_paperwork_end_areas
 
 /obj/item/paperwork/tradeship
-	name = "\improper Tradehouse payroll paperwork"
-	desc = "A complex list of salaries, hours and tax withheld for Tradehouse workers this month."
+	name = "\improper Syndicate payroll paperwork"
+	desc = "A complex list of salaries, hours and tax withheld for Syndicate workers this month."

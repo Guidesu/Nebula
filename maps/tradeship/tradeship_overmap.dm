@@ -1,6 +1,6 @@
 /obj/effect/overmap/visitable/ship/tradeship
-	name = "Tradeship Ocelot Alpha"
-	color = "#00ffff"
+	name = "ICSS Hope"
+	color = "#9fcb26"
 	start_x = 4
 	start_y = 4
 	vessel_mass = 5000

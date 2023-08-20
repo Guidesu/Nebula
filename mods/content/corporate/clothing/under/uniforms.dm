@@ -39,25 +39,25 @@
 	icon = 'mods/content/corporate/icons/clothing/under/work_nt.dmi'
 
 /obj/item/clothing/under/polo/nanotrasen
-	name = "\improper NanoTrasen polo and pants"
-	desc = "A fashionable polo and pair of trousers belonging to NanoTrasen, a megacorporation primarily concerned with the research of new and dangerous technologies."
+	name = "\improper Syndicate polo and pants"
+	desc = "A fashionable polo and pair of trousers belonging to Syndicate, a megacorporation primarily concerned with the research of new and dangerous technologies."
 	icon = 'mods/content/corporate/icons/clothing/under/smock_nt.dmi'
 	starting_accessories = list(/obj/item/clothing/accessory/tunic/nanotrasen)
 
 /obj/item/clothing/under/executive/nanotrasen
-	name = "\improper NanoTrasen polo and pants"
-	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a NanoTrasen higher-up."
+	name = "\improper Syndicate polo and pants"
+	desc = "A fashionable polo and pair of trousers made from expensive biohazard-resistant fabrics. The colors denote the wearer as a Syndicate higher-up."
 	icon = 'mods/content/corporate/icons/clothing/under/smock_exec_nt.dmi'
 	starting_accessories = list(/obj/item/clothing/accessory/tunic/exec/nanotrasen)
 
 /obj/item/clothing/under/pilot/nanotrasen
 	name = "red flight suit"
-	desc = "A sleek red NanoTrasen flight suit. It proudly sports three different patches with corporate logos on them, as well as several unnecessary looking flaps and pockets for effect."
+	desc = "A sleek red Syndicate flight suit. It proudly sports three different patches with corporate logos on them, as well as several unnecessary looking flaps and pockets for effect."
 	icon = 'mods/content/corporate/icons/clothing/under/pilot_nt.dmi'
 
 /obj/item/clothing/under/suit_jacket/corp/nanotrasen
-	name = "\improper NanoTrasen executive suit"
-	desc = "A set of NanoTrasen-issued suit pants and shirt that particularly enthusiastic company executives tend to wear."
+	name = "\improper Syndicate executive suit"
+	desc = "A set of Syndicate-issued suit pants and shirt that particularly enthusiastic company executives tend to wear."
 	icon = 'mods/content/corporate/icons/clothing/under/suit_nt.dmi'
 	starting_accessories = list(/obj/item/clothing/accessory/toggleable/corpjacket/nanotrasen, /obj/item/clothing/accessory/corptie/nanotrasen)
 

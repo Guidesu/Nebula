@@ -561,7 +561,7 @@
 /area/ship/trade/bridge_unused)
 "dm" = (
 /obj/abstract/level_data_spawner/main_level{
-	name = "Tradeship Upper Deck"
+	name = "Hope Upper Deck"
 	},
 /turf/space,
 /area/space)
@@ -766,6 +766,9 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/command/bridge_upper)
+"rW" = (
+/turf/simulated/floor/plating,
+/area/space)
 "sx" = (
 /obj/structure/railing/mapped{
 	dir = 4
@@ -3639,7 +3642,7 @@ aa
 aa
 ax
 ax
-ax
+rW
 ax
 ax
 ax

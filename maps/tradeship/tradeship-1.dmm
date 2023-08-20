@@ -3,9 +3,27 @@
 /turf/space,
 /area/space)
 "ab" = (
-/obj/effect/shuttle_landmark/below_deck_bow,
-/turf/space,
-/area/space)
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "scraplock";
+	name = "External Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/ship/trade/science)
 "ac" = (
 /obj/machinery/door/blast/regular{
 	dir = 2
@@ -57,29 +75,32 @@
 /turf/simulated/floor/plating,
 /area/ship/trade/escape_star)
 "ag" = (
-/obj/machinery/door/blast/regular{
-	dir = 4;
-	id_tag = "anomvent";
-	name = "Emergency Vent"
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/simulated/floor/plating,
-/area/ship/trade/artifact_storage)
+/obj/abstract/landmark/start{
+	name = "Cook"
+	},
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "ah" = (
 /turf/simulated/wall,
 /area/ship/trade/escape_port)
 "ai" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "scraplock";
-	name = "External Blast Doors";
-	opacity = 0
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/ship/trade/crew/dorms1)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "aj" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	id_tag = "cargo_pump"
@@ -108,37 +129,27 @@
 /turf/simulated/wall/r_wall,
 /area/ship/trade/cargo/lower)
 "am" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "scraplock";
-	name = "External Blast Doors";
-	opacity = 0
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
 	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/airless,
-/area/ship/trade/crew/dorms1)
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "an" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "scraplock";
-	name = "External Blast Doors";
-	opacity = 0
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/ship/trade/crew/dorms2)
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/kitchen)
 "ao" = (
 /turf/simulated/wall,
 /area/ship/trade/cargo/lower)
 "ap" = (
-/obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "aq" = (
 /obj/effect/paint/brown,
@@ -224,7 +235,7 @@
 /area/ship/trade/escape_star)
 "aA" = (
 /turf/simulated/wall/r_wall,
-/area/ship/trade/escape_star)
+/area/ship/trade/crew/dorms2)
 "aB" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -421,11 +432,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/eva)
 "aO" = (
-/turf/simulated/wall,
-/area/ship/trade/artifact_storage)
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "aP" = (
 /turf/simulated/wall/r_wall,
-/area/ship/trade/artifact_storage)
+/area/ship/trade/crew/toilets)
 "aR" = (
 /obj/structure/handrail{
 	dir = 4
@@ -465,21 +482,22 @@
 /area/ship/trade/cargo/lower)
 "aX" = (
 /turf/simulated/wall,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "aY" = (
 /turf/simulated/wall/r_wall,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "aZ" = (
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/obj/structure/table,
-/obj/machinery/button/blast_door{
-	id_tag = "anomvent";
-	name = "emergency vent control"
-	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/artifact_storage)
+/turf/simulated/wall,
+/area/ship/trade/crew/toilets)
 "ba" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light_switch{
@@ -493,8 +511,10 @@
 	icon_state = "0-2";
 	pixel_y = 1
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/artifact_storage)
+/obj/structure/hygiene/toilet,
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/toilets)
 "bc" = (
 /obj/machinery/light{
 	dir = 8
@@ -504,7 +524,11 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "bd" = (
 /obj/effect/floor_decal/corner/beige{
@@ -588,7 +612,11 @@
 	icon_state = "0-4"
 	},
 /obj/structure/disposalpipe/up,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "bj" = (
 /obj/machinery/power/apc{
@@ -606,35 +634,40 @@
 /obj/effect/floor_decal/corner/beige{
 	dir = 5
 	},
-/obj/structure/closet,
-/obj/random/gloves,
-/obj/random/clothing,
-/obj/random/clothing,
+/obj/structure/reagent_dispensers/water_cooler,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "bl" = (
 /obj/effect/floor_decal/corner/beige{
 	dir = 5
 	},
-/obj/structure/curtain/open/bed,
-/obj/structure/bed/padded,
-/obj/item/bedsheet/green,
-/obj/effect/decal/cleanable/cobweb2,
+/obj/structure/table,
+/obj/machinery/cooker/cereal,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "bm" = (
-/obj/machinery/door/window{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/trade/artifact_storage)
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "bn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4;
 	level = 2
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/artifact_storage)
+/obj/structure/curtain/open/shower,
+/obj/structure/mirror{
+	pixel_y = 29
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/toilets)
 "bo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -645,12 +678,30 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/artifact_storage)
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/toilets)
+"bp" = (
+/obj/structure/door/wood,
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "br" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down,
-/turf/simulated/open,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "bt" = (
 /obj/effect/floor_decal/corner/beige{
@@ -721,7 +772,11 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "bB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -734,25 +789,52 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "bC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"bD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"bG" = (
+/obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+	dir = 6
 	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
-"bD" = (
-/obj/structure/table,
-/obj/random/masks,
-/obj/random_multi/single_item/captains_spare_id,
-/turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "bI" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/mob/living/simple_animal/cat/fluff/ran,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "bJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -763,9 +845,11 @@
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "bK" = (
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "bM" = (
@@ -775,6 +859,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
 "bN" = (
@@ -784,6 +869,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "bP" = (
@@ -793,34 +879,40 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "bQ" = (
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/structure/closet,
-/obj/random/clothing,
-/obj/random/clothing,
-/obj/random/clothing,
 /obj/machinery/newscaster{
 	pixel_y = -30
 	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "bS" = (
 /obj/effect/floor_decal/corner/beige{
 	dir = 10
 	},
-/obj/structure/curtain/open/bed,
-/obj/structure/bed/padded,
-/obj/item/bedsheet/brown,
-/obj/abstract/landmark/start{
-	name = "Head Doctor"
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
 	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "bT" = (
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
@@ -838,13 +930,12 @@
 "bU" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/railing/mapped,
-/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "bV" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
 "bW" = (
@@ -876,7 +967,7 @@
 "ca" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall,
-/area/ship/trade/science/fabricaton)
+/area/ship/trade/crew/wash)
 "cb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -895,9 +986,16 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/trade/escape_port)
 "cc" = (
-/obj/machinery/design_database,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/structure/table,
+/obj/item/storage/laundry_basket,
+/obj/item/chems/spray/cleaner,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "cd" = (
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -910,13 +1008,17 @@
 /obj/machinery/light_switch{
 	pixel_y = 23
 	},
-/obj/structure/table,
-/obj/item/integrated_circuit_printer,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/washing_machine,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "ce" = (
 /turf/simulated/wall,
-/area/ship/trade/science/fabricaton)
+/area/ship/trade/crew/wash)
 "cf" = (
 /obj/machinery/light{
 	dir = 8
@@ -927,7 +1029,11 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "ck" = (
 /obj/effect/floor_decal/corner/beige{
@@ -942,6 +1048,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
 "cl" = (
@@ -955,11 +1064,15 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "cm" = (
 /turf/simulated/wall,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "cn" = (
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -972,33 +1085,30 @@
 /obj/effect/floor_decal/corner/beige{
 	dir = 5
 	},
-/obj/structure/closet,
-/obj/random/clothing,
-/obj/random/clothing,
-/obj/effect/decal/cleanable/cobweb,
 /obj/machinery/power/apc{
 	dir = 1;
 	pixel_y = 22
 	},
-/obj/random/gloves,
+/obj/machinery/cooker/fryer,
+/obj/structure/hygiene/sink{
+	pixel_x = -17;
+	pixel_y = 4;
+	dir = 1
+	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "cp" = (
-/obj/structure/curtain/open/bed,
-/obj/structure/bed/padded,
 /obj/effect/floor_decal/corner/beige{
 	dir = 5
 	},
-/obj/item/bedsheet/ce,
-/obj/abstract/landmark/start{
-	name = "Cook"
-	},
+/obj/machinery/vending/dinnerware,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "cq" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall/r_wall,
-/area/ship/trade/crew/dorms2)
+/obj/structure/table,
+/obj/machinery/microwave,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/kitchen)
 "cr" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -1011,7 +1121,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/ship/trade/science/fabricaton)
+/area/ship/trade/crew/wash)
 "cs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -1019,8 +1129,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "cu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1031,8 +1147,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "cx" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
@@ -1042,8 +1164,18 @@
 	dir = 9
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/mapped{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
+"cz" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "cC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -1058,7 +1190,13 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "cE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1071,7 +1209,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "cF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -1080,17 +1218,24 @@
 	dir = 10
 	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "cG" = (
-/obj/structure/table,
-/obj/item/newspaper,
-/turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/obj/structure/door/sandstone,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "cJ" = (
 /obj/machinery/light,
-/obj/machinery/fabricator/imprinter,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "cL" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
@@ -1112,41 +1257,41 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/structure/closet,
-/obj/random/clothing,
-/obj/random/clothing,
-/obj/item/clothing/mask/gas/clown_hat,
-/obj/item/clothing/shoes/clown_shoes,
-/obj/item/clothing/under/clown,
-/obj/item/stamp/clown,
-/obj/item/storage/backpack/clown,
-/obj/item/bikehorn,
-/obj/item/storage/fancy/crayons,
 /obj/machinery/newscaster{
 	pixel_y = -30
 	},
+/obj/structure/table,
+/obj/machinery/cooker/grill,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "cO" = (
-/obj/structure/curtain/open/bed,
-/obj/structure/bed/padded,
 /obj/effect/floor_decal/corner/beige{
 	dir = 10
 	},
-/obj/item/bedsheet/red,
-/obj/random_multi/single_item/captains_spare_id,
-/obj/abstract/landmark/start{
-	name = "Head Engineer"
-	},
+/obj/structure/table,
+/obj/item/kitchen/rollingpin,
+/obj/item/storage/box/donkpockets,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "cP" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall,
-/area/ship/trade/science/fabricaton)
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "cS" = (
 /turf/simulated/wall,
 /area/ship/trade/science)
+"cT" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/wall,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "cU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
@@ -1165,6 +1310,16 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
+"cX" = (
+/obj/structure/bed/chair/wood/wings,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "cY" = (
 /obj/effect/floor_decal/corner/beige{
 	dir = 6
@@ -1201,6 +1356,16 @@
 /area/ship/trade/science)
 "da" = (
 /obj/machinery/seed_storage/xenobotany,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "db" = (
@@ -1212,10 +1377,29 @@
 /obj/item/disk/botany,
 /obj/item/chems/glass/bottle/eznutrient,
 /obj/item/chems/glass/bottle/robustharvest,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "dd" = (
 /turf/simulated/wall/r_wall,
+/area/ship/trade/science)
+"de" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/science)
 "df" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1238,6 +1422,9 @@
 	},
 /obj/structure/railing/mapped{
 	dir = 1
+	},
+/obj/structure/sign/warning/fall{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
@@ -1287,7 +1474,12 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1296,7 +1488,13 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dm" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -1315,16 +1513,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
 "dq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/item/stool/padded,
 /obj/abstract/landmark/start{
 	name = "Junior Researcher"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "dr" = (
@@ -1337,6 +1534,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "ds" = (
@@ -1346,7 +1544,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dt" = (
 /obj/effect/floor_decal/corner/beige{
@@ -1361,7 +1563,7 @@
 /area/ship/trade/cargo/lower)
 "dv" = (
 /obj/machinery/light,
-/turf/simulated/open,
+/turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
 "dw" = (
 /obj/effect/floor_decal/corner/beige{
@@ -1397,7 +1599,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/lino,
 /area/ship/trade/drunk_tank)
 "dz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1415,14 +1617,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
 "dB" = (
 /obj/structure/table,
 /obj/random/plushie,
 /obj/item/synthesized_instrument/violin,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
 "dD" = (
@@ -1430,6 +1630,7 @@
 	dir = 1;
 	level = 2
 	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "dE" = (
@@ -1440,6 +1641,7 @@
 /obj/machinery/light_switch{
 	pixel_x = 28
 	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "dH" = (
@@ -1449,7 +1651,12 @@
 	icon_state = "1-10"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dJ" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -1464,6 +1671,7 @@
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/structure/emergency_dispenser/south,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "dL" = (
@@ -1482,6 +1690,7 @@
 /obj/machinery/newscaster{
 	pixel_y = -30
 	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "dP" = (
@@ -1497,7 +1706,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dS" = (
 /obj/structure/cable{
@@ -1519,7 +1732,12 @@
 	dir = 1;
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dT" = (
 /obj/machinery/light{
@@ -1538,7 +1756,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dU" = (
 /obj/structure/disposalpipe/segment{
@@ -1554,7 +1777,11 @@
 	icon_state = "4-8"
 	},
 /obj/structure/emergency_dispenser/north,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1569,7 +1796,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dW" = (
 /obj/structure/cable{
@@ -1583,7 +1814,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1598,7 +1833,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "dZ" = (
 /turf/simulated/wall,
@@ -1615,6 +1854,15 @@
 "ef" = (
 /turf/simulated/wall/r_wall,
 /area/ship/trade/maintenance/techstorage)
+"eh" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "em" = (
 /obj/machinery/light{
 	dir = 1;
@@ -1678,6 +1926,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/trade/maintenance/eva)
+"es" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central6{
+	pixel_y = -10
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "et" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -1688,6 +1948,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "eu" = (
@@ -1700,6 +1961,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "ew" = (
@@ -1713,6 +1975,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "ey" = (
@@ -1779,6 +2042,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/trade/maintenance/eva)
+"eF" = (
+/obj/machinery/cryopod/lifepod,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"eG" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/wall/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "eJ" = (
 /obj/machinery/vending/materials{
 	dir = 4
@@ -1786,9 +2065,20 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"eM" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "eN" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "eQ" = (
@@ -1820,10 +2110,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/eva)
+"eU" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "eV" = (
 /obj/abstract/landmark/start{
 	name = "Robot"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "eW" = (
@@ -1834,6 +2132,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "eY" = (
@@ -1864,7 +2163,7 @@
 /turf/simulated/floor/plating,
 /area/ship/trade/maintenance/storage)
 "fa" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/table,
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
 "fb" = (
@@ -1880,6 +2179,25 @@
 /obj/machinery/suit_cycler/tradeship,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/eva)
+"fi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
+/area/ship/trade/maintenance/lower)
 "fs" = (
 /obj/structure/closet/wardrobe/mixed,
 /obj/item/storage/backpack/dufflebag,
@@ -1901,19 +2219,51 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/trade/escape_port)
 "fL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/seed_storage/xenobotany,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
+"fV" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/kitchen)
 "fX" = (
 /obj/structure/handrail,
 /turf/space,
 /area/space)
+"ga" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/alarm{
+	locked = 0;
+	pixel_y = 20
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/seed_storage/garden,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
 "gb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate,
-/obj/random/loot,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/advdevice,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "gc" = (
@@ -1930,6 +2280,18 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/trade/maintenance/eva)
+"gd" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "gh" = (
 /obj/machinery/material_processing/stacker{
 	input_turf = 1;
@@ -1937,6 +2299,40 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/trade/cargo/lower)
+"gA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/seed_extractor,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
+"gL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"gP" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/westright{
+	dir = 2
+	},
+/obj/item/towel,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "gX" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
@@ -1949,6 +2345,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "hc" = (
@@ -1979,22 +2376,35 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"hm" = (
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "hn" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall,
 /area/ship/trade/maintenance/eva)
 "hp" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/window/westleft,
-/obj/machinery/door/blast/shutters/open{
-	id_tag = "rndshutters";
-	name = "Fabrication Bay Shutters"
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
 	},
-/obj/structure/table/marble,
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
-/area/ship/trade/science/fabricaton)
+/area/ship/trade/crew/wash)
+"hA" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/kitchen)
 "hI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/industrial/warning{
@@ -2010,6 +2420,41 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
+"hM" = (
+/obj/machinery/cooker/oven,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"hO" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/mob/living/simple_animal/chicken,
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"hP" = (
+/obj/structure/table/marble,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/cooker/grill,
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"hS" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "ib" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/railing/mapped,
@@ -2027,10 +2472,11 @@
 /obj/structure/disposalpipe/segment/bent{
 	dir = 4
 	},
-/obj/structure/sign/department/science_1{
-	pixel_x = -30
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "iH" = (
 /obj/item/storage/toolbox/mechanical{
@@ -2042,23 +2488,31 @@
 /obj/item/scanner/gas,
 /obj/structure/rack,
 /obj/item/inflatable_dispenser,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "iQ" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
-/area/ship/trade/artifact_storage)
+/obj/structure/curtain/open/shower,
+/obj/structure/hygiene/shower{
+	dir = 4
+	},
+/obj/item/soap,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/toilets)
 "iS" = (
 /obj/abstract/level_data_spawner/main_level{
-	name = "Tradeship Cargo Deck"
+	name = "Hope Cargo Deck"
 	},
 /turf/space,
 /area/space)
 "iW" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall/r_wall,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/science)
 "jb" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -2078,9 +2532,16 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/trade/escape_port)
 "jD" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall/r_wall/hull,
-/area/ship/trade/crew/dorms1)
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "jV" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -2114,16 +2575,107 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"kd" = (
+/obj/effect/paint/brown,
+/obj/item/sword/wood,
+/turf/simulated/wall/r_wall,
+/area/ship/trade/drunk_tank)
+"kh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/ship/trade/science)
+"kn" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
 "kr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
+"ku" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/flora/bush/brflowers,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"ky" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"kK" = (
+/obj/machinery/newscaster{
+	dir = 8;
+	pixel_x = -30
+	},
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "kP" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall/r_wall,
-/area/ship/trade/crew/dorms1)
+/obj/structure/flora/bush/brflowers,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"kV" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"la" = (
+/obj/effect/floor_decal/corner_techfloor_grid,
+/obj/structure/window/reinforced,
+/obj/structure/hygiene/shower{
+	dir = 8
+	},
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "lb" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -2138,8 +2690,41 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
+"lc" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
+"le" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/structure/table,
+/obj/item/synthesized_instrument/guitar,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"lf" = (
+/obj/structure/table,
+/obj/machinery/cooker/candy,
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "lg" = (
 /obj/structure/closet/crate/plastic,
 /obj/item/storage/ore,
@@ -2151,8 +2736,25 @@
 /obj/item/radio,
 /obj/item/radio,
 /obj/item/radio,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"lk" = (
+/obj/structure/door/wood,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"lv" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "lw" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -2164,9 +2766,23 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"lz" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "lD" = (
-/turf/simulated/floor/reinforced,
-/area/ship/trade/artifact_storage)
+/obj/structure/curtain/open/shower,
+/obj/structure/hygiene/shower{
+	dir = 4
+	},
+/obj/item/soap,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/toilets)
 "lE" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall,
@@ -2174,6 +2790,18 @@
 "lK" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
+"lP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "lZ" = (
 /turf/simulated/open,
 /area/ship/trade/cargo/lower)
@@ -2194,9 +2822,31 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"me" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/window/reinforced,
+/obj/structure/table/steel_reinforced,
+/obj/item/chems/glass/beaker/large,
+/obj/machinery/reagentgrinder/juicer,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
+"mu" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "my" = (
 /obj/machinery/cryopod/robot,
 /obj/abstract/landmark/latejoin/cyborg,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "mN" = (
@@ -2204,6 +2854,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "nb" = (
@@ -2239,6 +2890,7 @@
 /obj/item/stock_parts/circuitboard/unary_atmos/engine,
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/bulbs,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "nn" = (
@@ -2246,6 +2898,47 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/ship/trade/science)
+"np" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime{
+	dir = 9
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/smartfridge/drying_rack,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
+"nq" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"nr" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/obj/structure/table/woodentable,
+/obj/machinery/cooker/grill,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"ns" = (
+/obj/structure/table/woodentable,
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "nz" = (
 /obj/machinery/light{
 	dir = 8
@@ -2253,13 +2946,25 @@
 /obj/machinery/vending/tool{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"nD" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/door/airlock/hatch/autoname/general,
+/turf/simulated/floor/tiled,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "nG" = (
-/obj/machinery/artifact_scanpad,
 /obj/machinery/light,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/artifact_storage)
+/obj/structure/curtain/open/shower,
+/obj/structure/hygiene/toilet{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/toilets)
 "od" = (
 /obj/structure/ore_box,
 /obj/effect/floor_decal/corner/beige{
@@ -2276,6 +2981,32 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/trade/cargo/lower)
+"oG" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"oU" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/westright{
+	dir = 2
+	},
+/obj/item/towel,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "pn" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2288,6 +3019,7 @@
 /obj/abstract/landmark/start{
 	name = "Junior Engineer"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "pr" = (
@@ -2302,8 +3034,60 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/emergency_dispenser/east,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"pt" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central6{
+	pixel_y = -10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"pv" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"pA" = (
+/mob/living/simple_animal/cow,
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"pO" = (
+/obj/structure/table/woodentable,
+/obj/item/sword/wood,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "qb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -2321,18 +3105,55 @@
 /obj/abstract/landmark/latejoin/cryo_two,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/trade/escape_star)
+"qi" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "ql" = (
 /obj/structure/handrail{
 	dir = 1
 	},
 /turf/space,
 /area/space)
-"qF" = (
-/obj/structure/window/reinforced{
+"qp" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/cryopod/lifepod,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"qE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
-/area/ship/trade/artifact_storage)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"qF" = (
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/toilets)
+"qZ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/obj/structure/flora/bush/genericbush,
+/obj/machinery/cooker/oven,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "rb" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -2342,8 +3163,16 @@
 	pixel_x = 9;
 	pixel_y = 21
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"rf" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "rv" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
@@ -2357,12 +3186,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"rM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "rN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "rP" = (
 /obj/structure/handrail{
@@ -2385,17 +3230,78 @@
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall,
 /area/ship/trade/maintenance/techstorage)
+"so" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central6{
+	pixel_y = -10
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "sB" = (
 /turf/simulated/wall/r_wall,
-/area/ship/trade/science/fabricaton)
+/area/ship/trade/crew/wash)
+"sC" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "sM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/structure/closet,
+/obj/item/storage/backpack/dufflebag,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/structure/mirror{
+	pixel_y = 29
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
+"sX" = (
+/mob/living/simple_animal/chicken,
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
 "sY" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
 /area/ship/trade/escape_port)
+"tp" = (
+/obj/structure/table/marble,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/obj/machinery/cooker/cereal,
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "ts" = (
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -2406,12 +3312,47 @@
 	pixel_y = 22
 	},
 /obj/item/stool/padded,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/drunk_tank)
+"tu" = (
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/table/woodentable,
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "tz" = (
 /obj/machinery/material_processing/smeltery,
 /turf/simulated/floor/plating,
 /area/ship/trade/cargo/lower)
+"tB" = (
+/obj/machinery/newscaster{
+	dir = 8;
+	pixel_x = -30
+	},
+/obj/structure/flora/bush/ppflowers,
+/obj/structure/window/reinforced{
+	health = 1e+007
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "tE" = (
 /obj/machinery/door/airlock/hatch/autoname/engineering,
 /obj/machinery/door/firedoor,
@@ -2422,18 +3363,28 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/trade/maintenance/techstorage)
+"tF" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/vending/hydronutrients,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
 "ub" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/abstract/landmark/start{
-	name = "Head Researcher"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "ui" = (
 /obj/structure/closet/crate,
 /obj/item/strangerock,
@@ -2449,6 +3400,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "un" = (
@@ -2464,10 +3416,13 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "uw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2479,7 +3434,11 @@
 	pixel_x = -30
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "uz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -2495,14 +3454,22 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "uX" = (
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "uY" = (
 /obj/structure/closet/wardrobe/mixed,
@@ -2527,15 +3494,35 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/obj/machinery/fabricator/robotics,
-/obj/machinery/newscaster{
-	pixel_y = -30
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
+"vE" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "vI" = (
 /obj/structure/emergency_dispenser/east,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "vW" = (
 /obj/effect/paint/brown,
@@ -2549,43 +3536,141 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/trade/escape_star)
+"wh" = (
+/obj/structure/table/marble,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"wi" = (
+/obj/machinery/newscaster{
+	dir = 8;
+	pixel_x = -30
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "wl" = (
 /obj/item/stock_parts/circuitboard/pacman,
 /obj/item/stock_parts/circuitboard/recharge_station,
 /obj/item/stock_parts/circuitboard/shield_generator,
 /obj/structure/rack,
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
-	},
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"ww" = (
+/obj/structure/table/woodentable,
+/obj/machinery/recharger,
+/turf/simulated/floor/carpet/green,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "wI" = (
 /obj/structure/bed/padded,
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/item/bedsheet/mime,
-/obj/effect/decal/cleanable/cobweb2,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
+"wW" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "xa" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall,
-/area/ship/trade/crew/dorms2)
+/obj/structure/table,
+/obj/machinery/reagentgrinder/juicer,
+/obj/item/chems/glass/beaker{
+	pixel_x = 5
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/kitchen)
 "xb" = (
 /obj/effect/shuttle_landmark/below_deck_starboardastern,
 /turf/space,
 /area/space)
+"xv" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"xF" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/random/drinkbottle,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/chems/condiment/flour,
+/obj/item/chems/condiment/flour,
+/obj/item/chems/condiment/flour,
+/turf/simulated/floor/tiled,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"xR" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/power/apc{
+	locked = 0;
+	name = "south bump";
+	pixel_y = -28
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
+"xV" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
 "yb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/beige{
 	dir = 5
 	},
-/obj/structure/holostool,
 /obj/machinery/light{
 	dir = 1;
 	icon_state = "bulb1"
@@ -2596,8 +3681,45 @@
 /obj/item/radio/intercom{
 	pixel_y = 22
 	},
+/obj/machinery/icecream_vat,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"yj" = (
+/obj/structure/window/reinforced,
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/simulated/floor/tiled,
+/area/ship/trade/cargo/lower)
+"yl" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"yw" = (
+/obj/structure/table/woodentable,
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "yF" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall,
@@ -2617,7 +3739,11 @@
 	pixel_y = 1
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "zb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2632,7 +3758,33 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch/autoname/science,
 /turf/simulated/floor/plating,
-/area/ship/trade/artifact_storage)
+/area/ship/trade/crew/toilets)
+"zl" = (
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/bed/chair/wood/wings,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"zp" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "zC" = (
 /obj/machinery/conveyor{
 	backwards = 8;
@@ -2647,16 +3799,83 @@
 "zJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/emergency_dispenser/east,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"zR" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"zS" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/bed,
+/obj/item/bedsheet,
+/turf/simulated/floor/carpet/green,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"zZ" = (
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Ab" = (
 /obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/ship/trade/cargo/lower)
+"Aj" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/autoname/science,
+/turf/simulated/floor,
+/area/ship/trade/science)
+"Ao" = (
+/obj/effect/floor_decal/corner_techfloor_grid,
+/obj/structure/window/reinforced,
+/obj/structure/hygiene/shower{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blue3,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "AM" = (
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
+"AN" = (
+/obj/structure/window/reinforced,
+/turf/simulated/wall/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"AP" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/structure/table,
+/obj/item/storage/tray,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"AW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/tiled,
+/area/ship/trade/cargo/lower)
 "Bb" = (
 /obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2670,7 +3889,20 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Bf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Bq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/beige{
@@ -2711,23 +3943,58 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"CQ" = (
+/turf/simulated/wall/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"CW" = (
+/obj/structure/table/marble,
+/obj/structure/window/reinforced,
+/obj/machinery/cooker/candy,
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Db" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
 	level = 2
 	},
-/obj/structure/holostool,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms1)
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Dc" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
 "De" = (
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -32
 	},
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
 "Dh" = (
@@ -2738,6 +4005,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"DJ" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "DQ" = (
 /obj/machinery/door/airlock/hatch/autoname/engineering,
 /obj/machinery/door/firedoor,
@@ -2751,7 +4021,11 @@
 	pixel_y = -29
 	},
 /obj/item/stool/padded,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/drunk_tank)
 "DX" = (
 /obj/effect/paint/brown,
@@ -2760,9 +4034,21 @@
 "Ei" = (
 /turf/simulated/floor/airless,
 /area/space)
+"Ej" = (
+/obj/machinery/media/jukebox/old,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "En" = (
 /obj/item/stool/padded,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/drunk_tank)
 "EB" = (
 /obj/machinery/light{
@@ -2776,13 +4062,97 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"EU" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"EV" = (
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/obj/structure/table/woodentable,
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Fr" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8
+	},
+/obj/machinery/cooker/fryer,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Fw" = (
-/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
+"FD" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
+"FN" = (
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"FO" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
 "Gb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
@@ -2804,6 +4174,34 @@
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
 /area/ship/trade/maintenance/eva)
+"Gm" = (
+/obj/structure/flora/bush/lavendergrass,
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/flora/bush/brflowers,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"GS" = (
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"GT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "1-4";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "Hb" = (
 /obj/effect/floor_decal/corner/beige{
 	dir = 6
@@ -2825,24 +4223,74 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
+"Hj" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/bed/chair/wood/wings,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Hl" = (
+/obj/structure/table/woodentable,
+/obj/item/synthesized_instrument/guitar,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "HH" = (
 /obj/structure/ladder,
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"HQ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/mob/living/simple_animal/cow,
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"HV" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "HY" = (
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = -22
 	},
-/obj/machinery/fabricator/protolathe,
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "Ib" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/holostool,
 /obj/machinery/light{
 	dir = 1;
 	icon_state = "bulb1"
@@ -2853,13 +4301,42 @@
 /obj/item/radio/intercom{
 	pixel_y = 22
 	},
+/obj/machinery/cooker/oven,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "Ic" = (
-/obj/structure/table,
-/obj/machinery/cell_charger,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/machinery/newscaster{
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/structure/closet,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
+"Iu" = (
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/dogbed,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"IR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
 "IU" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -2868,6 +4345,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"Ja" = (
+/obj/structure/flora/bush/lavendergrass,
+/obj/structure/flora/bush/brflowers,
+/obj/structure/closet/secure_closet/personal,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Jb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2879,36 +4365,180 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/hatch/autoname/science,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/machinery/door/airlock/hatch{
+	name = "Laundry";
+	normalspeed = 0;
+	stripe_color = "#b7f27d"
+	},
 /turf/simulated/floor/plating,
-/area/ship/trade/science/fabricaton)
+/area/ship/trade/crew/wash)
+"Jd" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
+"Jh" = (
+/obj/structure/table/woodentable,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/cooker/cereal,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Jl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"Jm" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/table/woodentable,
+/obj/item/storage/lunchbox/heart,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Jn" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/ship/trade/science)
+"Jp" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
 "Jr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
 	level = 2
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/obj/structure/closet,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "Js" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/mining/brace,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
+"Jw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"JE" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/westright{
+	dir = 2
+	},
+/obj/item/towel,
+/turf/simulated/floor/carpet/blue3,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"JL" = (
+/obj/structure/table/marble,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "JM" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/ship/trade/science/fabricaton)
+/area/ship/trade/crew/wash)
+"JS" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"JW" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"JY" = (
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/maintenance/lower)
+"JZ" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "Kb" = (
-/obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -2918,9 +4548,37 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/tiled/dark,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
+"Kg" = (
+/obj/effect/floor_decal/corner_techfloor_grid,
+/obj/structure/window/reinforced,
+/obj/structure/hygiene/shower{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Ky" = (
+/obj/structure/table/woodentable,
+/obj/machinery/recharger,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"KM" = (
+/obj/structure/window/reinforced,
+/obj/structure/table/woodentable,
+/obj/machinery/cooker/candy,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "La" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -2931,25 +4589,39 @@
 /obj/structure/disposalpipe/segment/bent{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "Lb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1;
 	level = 2
 	},
-/obj/item/storage/briefcase,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
+/obj/structure/table,
+/obj/item/storage/fancy/egg_box,
+/obj/item/chems/condiment/flour,
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
 "Lx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stool/padded,
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"Ly" = (
+/obj/structure/flora/bush/genericbush,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "LA" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -2966,6 +4638,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "LN" = (
@@ -2975,17 +4648,49 @@
 	},
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
+"LP" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"LW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Mb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"Mc" = (
+/turf/simulated/floor/carpet/green,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Mg" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Ml" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2993,26 +4698,99 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "Mx" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall,
 /area/ship/trade/escape_port)
 "Nb" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/item/radio/intercom{
 	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
 "Nc" = (
-/obj/machinery/destructive_analyzer,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/turf/simulated/wall/walnut,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Nj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Nu" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
+"Ny" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
+"NA" = (
+/turf/simulated/floor/wood/bamboo,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "NL" = (
-/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
+/area/ship/trade/science)
+"NW" = (
+/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
+/area/ship/trade/maintenance/lower)
+"NX" = (
+/obj/structure/flora/bush/brflowers,
+/obj/structure/bed,
+/obj/item/bedsheet,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"NZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/closet/firecloset,
+/obj/item/flashlight/lamp/floodlamp,
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/trade/science)
 "Ob" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3028,8 +4806,104 @@
 /obj/machinery/door/airlock/hatch/autoname/science,
 /turf/simulated/floor/plating,
 /area/ship/trade/science)
+"Og" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Oi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Ok" = (
+/obj/structure/table/marble,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "On" = (
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/maintenance/lower)
+"Ow" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Oy" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/abstract/landmark/start{
+	name = "Cook"
+	},
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"OD" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/autoname/general,
+/turf/simulated/floor/carpet/green,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"OJ" = (
+/obj/item/stool/padded,
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"OQ" = (
+/obj/machinery/cryopod/lifepod,
+/turf/simulated/floor/carpet/green,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"OU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "Pb" = (
 /obj/structure/cable{
@@ -3044,8 +4918,21 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/drunk_tank)
+"Ph" = (
+/obj/machinery/door/firedoor,
+/obj/structure/door/sandstone,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Py" = (
 /obj/effect/decal/cleanable/spiderling_remains,
 /obj/machinery/light{
@@ -3066,42 +4953,121 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"Pz" = (
+/obj/machinery/door/window,
+/obj/machinery/door/window/northright,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "PJ" = (
-/obj/structure/curtain/open/bed,
-/obj/structure/bed/padded,
 /obj/effect/floor_decal/corner/beige{
 	dir = 10
 	},
-/obj/item/bedsheet/red,
-/obj/random_multi/single_item/captains_spare_id,
-/obj/abstract/landmark/start{
-	name = "Head Engineer"
+/obj/structure/table,
+/obj/item/chems/condiment/enzyme,
+/obj/item/chems/glass/rag,
+/obj/item/chems/condiment/small/peppermill{
+	pixel_x = 3
 	},
-/obj/item/stack/material/ingot/mapped/osmium/ten,
+/obj/item/chems/condiment/small/saltshaker{
+	pixel_x = -3
+	},
 /turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/area/ship/trade/crew/kitchen)
+"PZ" = (
+/obj/structure/window/reinforced,
+/turf/simulated/wall/walnut,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Qb" = (
-/obj/machinery/door/airlock/hatch/autoname/general,
-/obj/machinery/door/firedoor,
-/obj/structure/sign/warning/fall{
-	pixel_x = 32
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
 	},
+/obj/machinery/door/airlock/hatch/autoname/general,
 /turf/simulated/floor/tiled,
 /area/ship/trade/cargo/lower)
 "Qc" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/mob/living/simple_animal/cat/fluff/ran,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
+"Qf" = (
+/obj/structure/table,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Qg" = (
-/obj/effect/paint/brown,
-/obj/structure/sign/warning/caution,
-/turf/simulated/wall/r_wall,
-/area/ship/trade/artifact_storage)
+/obj/machinery/door/airlock/hatch/autoname/general,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Qo" = (
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"Qp" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Qt" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"Qv" = (
+/obj/structure/table/marble,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "QK" = (
 /obj/item/stock_parts/console_screen,
 /obj/item/stock_parts/console_screen,
@@ -3122,43 +5088,100 @@
 	},
 /obj/item/flashlight,
 /obj/item/flashlight,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "QV" = (
-/obj/machinery/artifact_analyser,
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/artifact_storage)
+/turf/simulated/wall,
+/area/ship/trade/crew/toilets)
 "Rb" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/hatch/autoname/general,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
+/turf/simulated/wall,
 /area/ship/trade/cargo/lower)
+"Rh" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Rl" = (
 /obj/machinery/material_processing/compressor,
 /turf/simulated/floor/plating,
 /area/ship/trade/cargo/lower)
 "Rs" = (
-/obj/machinery/button/blast_door{
-	id_tag = "rndshutters";
-	name = "Desk Shutters";
-	pixel_x = -25
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
 	},
-/obj/machinery/computer/design_console{
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
+"Rv" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"RH" = (
+/obj/structure/bed/chair/wood/wings,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"RO" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"RT" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"RY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Sb" = (
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -32
 	},
-/obj/effect/decal/cleanable/vomit,
 /obj/structure/hygiene/toilet{
 	dir = 1
 	},
@@ -3197,21 +5220,111 @@
 /obj/machinery/material_processing/unloader,
 /turf/simulated/floor/plating,
 /area/ship/trade/cargo/lower)
+"SI" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/structure/closet/secure_closet/hydroponics,
+/obj/item/chems/glass/bucket,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ship/trade/science)
+"ST" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/abstract/landmark/start{
+	name = "Cook"
+	},
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Tb" = (
 /obj/machinery/light,
 /obj/machinery/botany/extractor,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/ship/trade/science)
+"Te" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Tn" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Tp" = (
 /obj/item/mollusc/barnacle{
 	pixel_x = 18
 	},
 /turf/simulated/floor/airless,
 /area/space)
+"Ts" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "scraplock";
+	name = "External Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/ship/trade/science)
+"Tw" = (
+/obj/machinery/door/airlock/hatch/autoname/general,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "TC" = (
 /obj/machinery/recharge_station,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"TH" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"TQ" = (
+/obj/structure/window/reinforced,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"TS" = (
+/obj/machinery/door/airlock/hatch/autoname/general,
+/turf/simulated/floor/carpet/green,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "TZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3219,10 +5332,13 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "Ub" = (
-/obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -3236,8 +5352,22 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
+"Uc" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/picnic_basket,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Ur" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
 "UX" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/structure/cable,
@@ -3250,9 +5380,8 @@
 "Va" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall,
-/area/ship/trade/artifact_storage)
+/area/ship/trade/crew/toilets)
 "Vb" = (
-/obj/machinery/door/airlock/hatch/autoname/general,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -3266,12 +5395,18 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "Vc" = (
-/obj/effect/paint/brown,
-/turf/simulated/wall/r_wall/hull,
-/area/ship/trade/crew/dorms2)
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
 "Vm" = (
 /obj/item/stack/tape_roll/duct_tape,
 /obj/item/stack/material/reinforced/mapped/plasteel/fifty,
@@ -3289,10 +5424,44 @@
 /obj/item/stack/material/cardstock/mapped/cardboard/fifty,
 /obj/item/stack/tape_roll/duct_tape,
 /obj/item/stack/tape_roll/barricade_tape/engineering,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"Vv" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Vx" = (
+/obj/structure/closet/secure_closet/freezer,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/carpet,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"VS" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "VX" = (
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "Wi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3304,40 +5473,129 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "Wm" = (
 /obj/machinery/network/relay{
 	initial_network_id = "tradenet"
 	},
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/bluegrid,
 /area/ship/trade/maintenance/techstorage)
+"WI" = (
+/obj/structure/flora/bush/brflowers,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "WZ" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall,
 /area/ship/trade/science)
+"Xc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/grass,
+/area/ship/trade/science)
+"Xh" = (
+/obj/structure/window/reinforced,
+/obj/structure/flora/bush/brflowers,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"Xq" = (
+/obj/structure/table/woodentable,
+/obj/machinery/recharger,
+/turf/simulated/floor/carpet/blue,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "XF" = (
 /obj/structure/handrail{
 	dir = 8
 	},
 /turf/space,
 /area/space)
+"XJ" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
+"XW" = (
+/obj/structure/flora/bush/reedbush,
+/obj/structure/window/reinforced{
+	health = 1e+007
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/exterior/wildgrass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "Yb" = (
 /obj/item/stock_parts/circuitboard/helm,
 /obj/item/stock_parts/circuitboard/unary_atmos/cooler,
 /obj/structure/rack,
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/item/stock_parts/circuitboard/unary_atmos/heater,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
+"Ys" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
 "YH" = (
 /turf/simulated/floor/airless,
 /area/ship/trade/maintenance/eva)
+"YU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/lino,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
+"YZ" = (
+/turf/simulated/wall/r_wall,
+/area/ship/trade/crew/kitchen)
 "Za" = (
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/drunk_tank)
 "Zb" = (
 /obj/item/storage/toolbox/electrical,
@@ -3356,6 +5614,7 @@
 	dir = 5
 	},
 /obj/structure/emergency_dispenser/north,
+/obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/techstorage)
 "Zd" = (
@@ -3366,12 +5625,23 @@
 /obj/random/soap,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
-"Zs" = (
-/obj/abstract/landmark/start{
-	name = "Junior Researcher"
+"Zp" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/ship/trade/science/fabricaton)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/trade/science)
+"Zs" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/freezer,
+/area/ship/trade/crew/wash)
 "Zv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3381,16 +5651,42 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/trade/maintenance/storage)
+"Zy" = (
+/obj/structure/door/wood,
+/turf/simulated/floor/grass,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "ZA" = (
 /obj/structure/emergency_dispenser/west,
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/beige,
+/obj/effect/floor_decal/corner/beige{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
 /area/ship/trade/maintenance/lower)
 "ZJ" = (
 /turf/simulated/wall,
 /area/ship/trade/escape_star)
+"ZW" = (
+/obj/structure/window/reinforced,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 "ZY" = (
-/turf/simulated/floor/lino,
-/area/ship/trade/crew/dorms2)
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/wall/wood,
+/area/ship/trade/crew/dorms2{
+	name = "\improper Living Quarters";
+	icon_state = "red"
+	})
 
 (1,1,1) = {"
 aa
@@ -4998,18 +7294,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+dd
+dd
+dd
+dd
+dd
+dd
+dd
+dd
+dd
+dd
+dd
 aa
 aa
 aa
@@ -5080,18 +7376,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+NZ
+DJ
+Vc
+Qo
+Qo
+hO
+Qo
+pA
+Qo
+hO
+dd
 aa
 aa
 aa
@@ -5162,18 +7458,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+gA
+DJ
+Pz
+Ur
+Qo
+Qo
+Qo
+sX
+Qo
+Qo
+dd
 aa
 aa
 aa
@@ -5244,18 +7540,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+ga
+GT
+FD
+me
+Xc
+yl
+HQ
+Xc
+JS
+IR
+Ts
 aa
 aa
 aa
@@ -5326,18 +7622,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+tF
+rM
+HV
+np
+Ur
+kn
+EU
+Ur
+EU
+Qt
+Ts
 aa
 aa
 aa
@@ -5408,18 +7704,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+SI
+sC
+gd
+Zp
+JZ
+eh
+qi
+JZ
+XJ
+Jd
+dd
 aa
 aa
 aa
@@ -5490,18 +7786,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+lc
+de
+iW
+iW
+iW
+iW
+iW
+iW
+Nu
+Ys
+dd
 aa
 aa
 aa
@@ -5572,18 +7868,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dd
+dd
+FO
+Ny
+xV
+Dc
+Jp
+xV
+xV
+xV
+xR
+dd
 aa
 aa
 aa
@@ -5647,25 +7943,25 @@ sY
 sY
 sY
 Va
-Qg
-ag
-Qg
+Va
+Va
+Va
 ca
 ca
 ca
 cr
-cr
-cP
-cZ
-cZ
-cZ
-iW
+sB
 WZ
-XF
-aa
-aa
-aa
-aa
+ab
+Aj
+cZ
+dd
+dd
+Ts
+Ts
+Ts
+dd
+dd
 aa
 aa
 aa
@@ -5730,23 +8026,23 @@ ah
 ah
 aP
 iQ
-lD
+qF
 lD
 sB
 HY
 Rs
-Nc
+Rs
 Ic
-cP
+WZ
 da
 NL
-NL
+Jn
 dK
 yF
-rv
-rv
-rv
-rv
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -5812,17 +8108,17 @@ ah
 fs
 aP
 qF
-bm
+qF
 qF
 sB
 sM
 Fw
 cs
 Jr
-JM
+nn
 fL
-fL
-fL
+kh
+NL
 De
 yF
 se
@@ -5901,7 +8197,7 @@ cc
 Zs
 ub
 cJ
-JM
+nn
 db
 dq
 dD
@@ -5974,7 +8270,7 @@ Ei
 ac
 ar
 aC
-aO
+QV
 ba
 bo
 nG
@@ -5983,7 +8279,7 @@ cd
 Qc
 cu
 vb
-ce
+cS
 lb
 dr
 dE
@@ -6057,15 +8353,15 @@ ac
 ar
 jb
 aP
-aO
+QV
 zb
-aO
+QV
 ce
 ce
 hp
 Jb
 ce
-ce
+cS
 dd
 Ob
 cS
@@ -6221,18 +8517,18 @@ al
 ah
 ah
 ah
-On
+VX
 br
 zJ
 bI
 ds
-On
-On
+VX
+VX
 ap
 VX
 VX
 vI
-dP
+fi
 VX
 dZ
 Wm
@@ -6308,11 +8604,11 @@ Ab
 ao
 ao
 ao
-Ab
 ao
 ao
 ao
-Ab
+ao
+ao
 ao
 Ub
 rW
@@ -6479,7 +8775,7 @@ mb
 lK
 ao
 dS
-On
+JY
 ef
 ef
 ey
@@ -6534,7 +8830,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -6551,7 +8847,7 @@ du
 du
 Dh
 bv
-du
+AW
 bV
 lZ
 lZ
@@ -6561,7 +8857,7 @@ dh
 dv
 ao
 dT
-On
+JY
 eb
 em
 ez
@@ -6640,10 +8936,10 @@ lZ
 lZ
 lZ
 ao
-lZ
+lK
 ao
 dU
-VX
+On
 eb
 en
 eA
@@ -6870,7 +9166,7 @@ aa
 aa
 aa
 pr
-Sc
+yj
 zC
 oC
 gh
@@ -6878,15 +9174,15 @@ od
 jV
 ao
 ao
-Ab
 ao
 ao
 ao
-Ab
 ao
 ao
 ao
-Ab
+ao
+ao
+ao
 ao
 Vb
 rW
@@ -6961,17 +9257,17 @@ ZJ
 ZJ
 bi
 rN
-VX
 On
 On
-VX
-VX
-ap
+On
+On
+On
+NW
 dk
-On
+JY
 ZA
 dY
-VX
+On
 ee
 aw
 aB
@@ -7046,7 +9342,7 @@ bz
 ps
 yL
 cl
-cC
+OU
 bP
 Mb
 dl
@@ -7370,11 +9666,11 @@ ZJ
 uY
 aY
 bl
-bD
+ai
 bS
-cm
-cp
-ZY
+an
+hA
+an
 cO
 cm
 do
@@ -7449,25 +9745,25 @@ aa
 gX
 aq
 aA
-aA
-kP
 aY
+aY
+lf
 ai
-aX
-cq
+am
+YZ
 cp
-cG
+an
 PJ
-xa
+cm
 wI
 dB
 fa
 BO
 DX
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
 aa
 aa
 aa
@@ -7529,28 +9825,28 @@ aa
 aa
 aa
 rP
-gX
-gX
-gX
-jD
-jD
+aX
+Vv
+LP
+nD
+lz
+ai
 am
-jD
-Vc
+cm
 cq
 an
 xa
-cq
+YZ
 Cd
 at
 at
+kd
 DX
-DX
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
 aa
 aa
 aa
@@ -7607,32 +9903,32 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-rP
-aa
-aa
-aa
-rP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+xF
+LP
+aX
+lz
+ai
+am
+cm
+cm
+fV
+cm
+cm
+Qp
+bG
+Mg
+Mg
+Mg
+Mg
+kV
+aX
+aX
+aX
 aa
 aa
 aa
@@ -7689,32 +9985,32 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+AP
+le
+Rh
+aX
+aX
+aX
+aX
+lz
+JW
+YU
+Mg
+Mg
+Mg
+zp
+Mg
+YU
+Nj
+aX
+aX
+aX
+cT
+bp
+aX
+aX
+aX
 aa
 aa
 aa
@@ -7771,32 +10067,32 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aO
+aO
+FN
+Te
+Te
+pv
+Rv
+Oi
+Jw
+aX
+aX
+aX
+aX
+Tw
+aX
+aX
+aX
+aX
+CQ
+eG
+ZY
+oG
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -7852,33 +10148,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+Qf
+Qf
+FN
+Ej
+aX
+Qg
+aX
+aX
+aX
+aX
+Nc
+Nc
+Nc
+lP
+Nc
+CQ
+CQ
+CQ
+AN
+Iu
+tB
+oG
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -7934,33 +10230,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+qE
+aX
+Nc
+Nc
+Nc
+Nc
+zl
+wi
+lP
+Nc
+CQ
+nr
+pO
+ZW
+Ly
+XW
+oG
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8016,33 +10312,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+aX
+kK
+qE
+aX
+Nc
+tp
+rf
+PZ
+Hj
+zR
+lP
+Nc
+CQ
+Oy
+RH
+KM
+Xh
+bD
+xv
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8098,33 +10394,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+Qv
+hm
+Vx
+jD
+hm
+qE
+aX
+Nc
+ag
+NA
+CW
+jD
+bD
+RY
+Nc
+CQ
+TQ
+cX
+Jh
+Xh
+ky
+RO
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8180,33 +10476,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+ST
+hm
+wh
+jD
+hm
+qE
+aX
+Nc
+NA
+hS
+hP
+jD
+cP
+ns
+Nc
+CQ
+GS
+GS
+wW
+vE
+eU
+so
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8262,33 +10558,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+hm
+OJ
+JL
+jD
+hm
+Ok
+aX
+Nc
+zZ
+zZ
+RT
+TH
+zZ
+es
+Nc
+CQ
+Fr
+qZ
+CQ
+CQ
+Zy
+CQ
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8344,33 +10640,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+bD
+Bf
+gL
+gL
+LW
+pt
+aX
+Nc
+Fr
+hM
+Nc
+Nc
+cG
+Nc
+Nc
+CQ
+CQ
+CQ
+CQ
+WI
+eU
+kP
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8426,33 +10722,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+VS
+mu
+aX
+aX
+TS
+aX
+aX
+Nc
+Nc
+Nc
+Nc
+bm
+bm
+bm
+Nc
+CQ
+tu
+zZ
+lk
+eU
+eU
+kP
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8508,33 +10804,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+Mc
+Mc
+Mc
+aX
+Nc
+yw
+zZ
+Ph
+bm
+nq
+bm
+Nc
+CQ
+gP
+zZ
+CQ
+ku
+eU
+kP
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8590,33 +10886,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+EV
+NA
+OD
+Mc
+Mc
+Mc
+aX
+Nc
+oU
+zZ
+Nc
+bm
+Xq
+cz
+Nc
+CQ
+la
+zZ
+CQ
+CQ
+lk
+CQ
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8672,33 +10968,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+JE
+NA
+aX
+zS
+ww
+OQ
+aX
+Nc
+Kg
+eM
+Nc
+cG
+Nc
+Nc
+Nc
+CQ
+CQ
+CQ
+CQ
+Gm
+eU
+kP
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8754,33 +11050,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+Ao
+lv
+aX
+aX
+aX
+aX
+aX
+Nc
+Nc
+Nc
+Nc
+zZ
+zZ
+zZ
+Nc
+Nc
+CQ
+Ja
+Ky
+Gm
+eU
+kP
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8836,33 +11132,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+Nc
+Og
+bm
+zZ
+zZ
+Nc
+CQ
+zZ
+zZ
+zZ
+zZ
+zZ
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -8918,33 +11214,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+Nc
+Ow
+Og
+eF
+Tn
+Nc
+CQ
+Hl
+Uc
+Jm
+qp
+NX
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -9000,33 +11296,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+Nc
+Nc
+Nc
+Nc
+Nc
+Nc
+CQ
+CQ
+CQ
+CQ
+CQ
+CQ
+CQ
+aX
+aX
 aa
 aa
 aa
@@ -9083,31 +11379,31 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
 aa
 aa
 aa
@@ -9166,29 +11462,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
 aa
 aa
 aa

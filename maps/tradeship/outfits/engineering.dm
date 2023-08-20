@@ -1,5 +1,5 @@
 /decl/hierarchy/outfit/job/tradeship/hand/engine
-	name = "Tradeship - Job - Junior Engineer"
+	name = "Hope - Job - Junior Engineer"
 	head = /obj/item/clothing/head/hardhat
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 	id_type = /obj/item/card/id/tradeship/engineering
@@ -15,7 +15,7 @@
 	detail_color = COLOR_SUN
 
 /decl/hierarchy/outfit/job/tradeship/chief_engineer
-	name = "Tradeship - Job - Head Engineer"
+	name = "Hope - Job - Head Engineer"
 	uniform = /obj/item/clothing/under/chief_engineer
 	glasses = /obj/item/clothing/glasses/welding/superior
 	suit = /obj/item/clothing/suit/storage/hazardvest

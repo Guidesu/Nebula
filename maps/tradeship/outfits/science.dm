@@ -1,5 +1,5 @@
 /decl/hierarchy/outfit/job/tradeship/hand/researcher
-	name = "Tradeship - Job - Head Researcher"
+	name = "Hope - Job - Head Researcher"
 	shoes = /obj/item/clothing/shoes/dress
 	pda_type = /obj/item/modular_computer/pda/science
 	id_type = /obj/item/card/id/tradeship/science/head
@@ -11,7 +11,7 @@
 	detail_color = COLOR_PALE_PURPLE_GRAY
 
 /decl/hierarchy/outfit/job/tradeship/hand/researcher/junior
-	name = "Tradeship - Job - Junior Researcher"
+	name = "Hope - Job - Junior Researcher"
 	id_type = /obj/item/card/id/tradeship/science
 	l_ear = /obj/item/radio/headset/headset_sci
 

@@ -88,7 +88,7 @@
 	allowed_bodytypes = list(BODYTYPE_HUMANOID)
 
 /decl/prosthetics_manufacturer/nanotrasen
-	name = "NanoTrasen"
+	name = "Syndicate"
 	desc = "This limb is made from a cheap polymer."
 	icon = 'mods/content/corporate/icons/cyberlimbs/nanotrasen/nanotrasen_main.dmi'
 	allowed_bodytypes = list(BODYTYPE_HUMANOID)

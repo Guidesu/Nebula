@@ -1,4 +1,5 @@
 /datum/map/tradeship
+	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 	name = "Hope"
 	full_name = "Independent Colonial Space Ship Hope"
 	path = "tradeship"
@@ -14,14 +15,14 @@
 	company_short = "CoL"
 	lobby_screens = list('maps/tradeship/lobby/bloodmoney.png','maps/tradeship/lobby/vapormoney.png')
 	overmap_ids = list(OVERMAP_ID_SPACE)
-	num_exoplanets = 1
+	num_exoplanets = 7
 	welcome_sound = 'sound/effects/cowboysting.ogg'
 	emergency_shuttle_leaving_dock = "Attention all hands: the escape pods have been launched, maintaining burn for %ETA%."
 	emergency_shuttle_called_message = "Attention all hands: emergency evacuation procedures are now in effect. Escape pods will launch in %ETA%"
 	emergency_shuttle_recall_message = "Attention all hands: emergency evacuation sequence aborted. Return to normal operating conditions."
 	evac_controller_type = /datum/evacuation_controller/lifepods
 
-	starting_money = 5000
+	starting_money = 10000
 	department_money = 0
 	salary_modifier = 0.2
 
@@ -36,7 +37,7 @@
 	new /datum/trade_hub/singleton/tradeship
 
 /datum/trade_hub/singleton/tradeship
-	name = "Colonial Frigate Network"
+	name = "Civillian Colonial Frigate Network"
 
 /datum/trade_hub/singleton/tradeship/get_initial_traders()
 	return list(

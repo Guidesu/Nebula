@@ -16,7 +16,7 @@
 	markings_color = COLOR_PALE_YELLOW
 
 /obj/item/clothing/suit/storage/toggle/labcoat/science/corp/nanotrasen
-	name = "\improper NanoTrasen labcoat"
+	name = "\improper Syndicate labcoat"
 	markings_color = COLOR_NT_RED
 
 /obj/item/clothing/suit/storage/toggle/labcoat/science/corp/heph

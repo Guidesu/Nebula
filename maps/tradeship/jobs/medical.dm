@@ -1,5 +1,5 @@
 /datum/job/tradeship_doctor
-	title = "Junior Doctor"
+	title = "Aetheris Biomedical Specialist"
 	department_types = list(/decl/department/medical)
 	head_position = 0
 	supervisors = "the Head Doctor and the Captain"
@@ -17,6 +17,26 @@
 		SKILL_MEDICAL   = SKILL_MAX,
 	    SKILL_ANATOMY   = SKILL_MAX,
 	    SKILL_CHEMISTRY = SKILL_MAX
+	)
+	alt_titles = list(
+        "Aetheris Nurse",
+        "Aetheris Physician",
+        "Aetheris Surgeon",
+        "Aetheris Specialist Paramedic",
+        "Aetheris Senior Physician")
+
+	allowed_branches = list(
+		/datum/mil_branch/colonists,
+		/datum/mil_branch/syndicate_freelancers
+	)
+
+	allowed_ranks = list(
+		/datum/mil_rank/col,
+		/datum/mil_rank/sfd/sfd1,
+		/datum/mil_rank/sfd/sfd2,
+		/datum/mil_rank/sfd/sfd5,
+		/datum/mil_rank/sfd/sfd4,
+		/datum/mil_rank/sfd/sfd3
 	)
 	minimal_player_age = 3
 	total_positions = 5
@@ -41,20 +61,28 @@
 	outfit_type = /decl/hierarchy/outfit/job/tradeship/doc/junior
 	event_categories = list(ASSIGNMENT_MEDICAL)
 
-/datum/job/tradeship_doctor/head
-	title = "Head Doctor"
+/datum/job/tradeship_medhead
+	title = "Chief Biomedical Specialist"
 	head_position = 1
 	department_types = list(
 		/decl/department/medical,
 		/decl/department/command
 	)
+	allowed_branches = list(
+		/datum/mil_branch/syndicate_freelancers
+	)
+
+	allowed_ranks = list(
+		/datum/mil_rank/sfd/sfd7,
+		/datum/mil_rank/sfd/sfd6,
+		/datum/mil_rank/sfd/sfd5
+	)
 	supervisors = "the Captain and your own ethics"
 	outfit_type = /decl/hierarchy/outfit/job/tradeship/doc
-	alt_titles = list("Surgeon")
 	total_positions = 1
 	spawn_positions = 1
 	skill_points = 28
-	guestbanned = 1	
+	guestbanned = 1
 	must_fill = 1
 	not_random_selectable = 1
 	selection_color = "#026865"

@@ -5,5 +5,5 @@
 
 /obj/item/documents/tradehouse/personnel
 	name = "tradehouse personnel data"
-	desc = "Tradehouse interests are furthered by those who serve the house. A good house must know all who work for it."
+	desc = "Syndicate interests are furthered by those who serve the house. A good house must know all who work for it."
 	description_antag = "An enemy of the house could use this to figure out where personnel live and who among them might be a problem to them."

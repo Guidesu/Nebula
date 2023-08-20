@@ -2,6 +2,13 @@
 	title = "Survivor"
 	supervisors = "your conscience"
 	account_allowed = FALSE
+	allowed_branches = list(
+		/datum/mil_branch/colonists,
+	)
+
+	allowed_ranks = list(
+		/datum/mil_rank/col,
+	)
 	latejoin_at_spawnpoints = TRUE
 	announced = FALSE
 	create_record = FALSE

@@ -1,7 +1,5 @@
 #if !defined(USING_MAP_DATUM)
 
-	#include "../random_ruins/exoplanet_ruins/playablecolony/playablecolony.dm"
-
 	#include "../../mods/content/mundane.dm"
 	#include "../../mods/content/bigpharma/_bigpharma.dme"
 	#include "../../mods/content/corporate/_corporate.dme"
@@ -12,6 +10,10 @@
 	#include "../../mods/content/scaling_descriptors.dm"
 	#include "../../mods/content/xenobiology/_xenobiology.dme"
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
+	#include "../../mods/content/genemodding/_genemodding.dme"
+	#include "../../mods/content/baychems/_baychems.dme"
+	#include "../../mods/content/fov_module/_fov_module.dme"
+	#include "../../mods/utility/ooc_notes/_ooc_notes.dme"
 
 	#include "../../mods/mobs/dionaea/_dionaea.dme"
 	#include "../../mods/mobs/borers/_borers.dme"
@@ -23,7 +25,6 @@
 	#include "../../mods/species/bayliens/_bayliens.dme"
 	#include "../../mods/species/vox/_vox.dme"
 
-	#include "../away/bearcat/bearcat.dm"
 	#include "../away/casino/casino.dm"
 	#include "../away/derelict/derelict.dm"
 	#include "../away/errant_pisces/errant_pisces.dm"
@@ -33,9 +34,7 @@
 	#include "../away/mobius_rift/mobius_rift.dm"
 	#include "../away/smugglers/smugglers.dm"
 	#include "../away/slavers/slavers_base.dm"
-	#include "../away/unishi/unishi.dm"
 	#include "../away/yacht/yacht.dm"
-	#include "../away/liberia/liberia.dm"
 
 	#include "tradeship_antagonists.dm"
 	#include "tradeship_areas.dm"
@@ -71,6 +70,6 @@
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Tradeship
+	#warn A map has already been included, ignoring Hope
 
 #endif

@@ -1,5 +1,12 @@
 /datum/job/tradeship_robot
 	title = "Robot"
+	allowed_branches = list(
+		/datum/mil_branch/colonists
+	)
+
+	allowed_ranks = list(
+		/datum/mil_rank/col)
+
 	event_categories = list(ASSIGNMENT_ROBOT)
 	total_positions = 1
 	spawn_positions = 1

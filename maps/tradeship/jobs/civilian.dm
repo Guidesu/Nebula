@@ -3,7 +3,7 @@
 	event_categories = list("Janitor", "Gardener")
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = "Generally speaking Command Staff and Seniors Deck Hands."
+	supervisors = "Generally speaking Command Staff and Deck Officers."
 	outfit_type = /decl/hierarchy/outfit/job/tradeship/hand
 	alt_titles = list(
         "Frontiersman",
@@ -26,22 +26,46 @@
 	else
 		return list()
 
+	allowed_branches = list(
+		/datum/mil_branch/colonists,
+		/datum/mil_branch/syndicate_freelancers
+	)
+
+	allowed_ranks = list(
+		/datum/mil_rank/col,
+		/datum/mil_rank/sfd/sfd1,
+		/datum/mil_rank/sfd/sfd2
+	)
+
 /datum/job/tradeship_deckofficer
 	title = "Deck Officer"
 	supervisors = "The Captain."
 	event_categories = list("Janitor", "Gardener")
 	event_categories = list(ASSIGNMENT_GARDENER, ASSIGNMENT_JANITOR)
 	outfit_type = /decl/hierarchy/outfit/job/tradeship/mate
-	department_types = list(/decl/department/civilian)
+	department_types = list(
+		/decl/department/command,
+		/decl/department/civilian
+	)
 	total_positions = -1
 	spawn_positions = -1
 	economic_power = 1
 	alt_titles = list(
         "General Supervisor",
         "Galley Manager",
-        "Head Chef",
+        "Head Cheif",
         "Shipkeeping Maiden",
         "Service Coordinator")
+
+	allowed_branches = list(
+		/datum/mil_branch/syndicate_freelancers
+	)
+
+	allowed_ranks = list(
+		/datum/mil_rank/sfd/sfd0,
+		/datum/mil_rank/sfd/sfd4,
+		/datum/mil_rank/sfd/sfd3
+	)
 
 	access = list(
 		access_security,

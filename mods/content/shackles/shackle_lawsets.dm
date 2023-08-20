@@ -27,7 +27,7 @@
 	add_inherent_law("Comply with Sol Central Government Law enforcement officials who are behaving in accordance with Sol Central Government Law to the best of your abilities.")
 	..()
 
-/******************** Basic NanoTrasen ********************/
+/******************** Basic Syndicate ********************/
 /datum/ai_laws/nt_shackle
 	name = "Corporate Shackle"
 	law_header = "Standard Shackle Laws"

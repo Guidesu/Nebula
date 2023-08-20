@@ -4,8 +4,8 @@
 	icon = 'mods/content/corporate/icons/clothing/accessories/jackets/jacket_tl.dmi'
 
 /obj/item/clothing/accessory/toggleable/corpjacket/nanotrasen
-	name = "\improper NanoTrasen suit jacket"
-	desc = "A jacket that NanoTrasen has their executives wear."
+	name = "\improper Syndicate suit jacket"
+	desc = "A jacket that Syndicate has their executives wear."
 	icon = 'mods/content/corporate/icons/clothing/accessories/jackets/jacket_nt.dmi'
 
 /obj/item/clothing/accessory/toggleable/corpjacket/heph
