@@ -3443,7 +3443,7 @@
 	dir = 4
 	},
 /obj/structure/casino/roulette_chart{
-	density = 1
+	density = TRUE
 	},
 /turf/simulated/floor/wood/walnut)
 "hT" = (
@@ -3729,7 +3729,7 @@
 /obj/machinery/reagent_temperature,
 /obj/item/chems/drinks/shaker,
 /obj/machinery/vending/boozeomat{
-	density = 0;
+	density = FALSE;
 	pixel_y = -32;
 	req_access = list()
 	},
@@ -4232,7 +4232,7 @@
 	dir = 4
 	},
 /obj/structure/casino/roulette{
-	density = 1
+	density = TRUE
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -5036,7 +5036,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/obj/structure/sign/warning/secure_area/armory{
+/obj/structure/sign/warning/armory{
 	dir = 4;
 	pixel_x = -32
 	},

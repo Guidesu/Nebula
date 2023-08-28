@@ -16,7 +16,7 @@
 
 /obj/item/stack/tape_roll/can_split()
 	return FALSE
-/obj/item/stack/tape_roll/can_merge()
+/obj/item/stack/tape_roll/can_merge_stacks(var/obj/item/stack/other)
 	return FALSE
 
 ///////////////////////////////////////////////
@@ -168,7 +168,7 @@
 	return 0.2
 
 /obj/item/duct_tape/attack_hand(var/mob/user)
-	if(user.has_dexterity(DEXTERITY_GRIP))
+	if(user.check_dexterity(DEXTERITY_HOLD_ITEM))
 		anchored = FALSE // Unattach it from whereever it's on, if anything.
 	return ..()
 

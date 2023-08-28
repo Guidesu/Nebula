@@ -20,6 +20,7 @@
 	exterior_atmos_temp = null //Generate me
 	level_generators    = list(
 		/datum/random_map/noise/exoplanet/barren,
+		/datum/random_map/noise/ore/rich,
 	)
 
 ////////////////////////////////////////////////////////////////////////////
@@ -46,6 +47,7 @@
 	atmosphere_gen_pressure_max    = 0.05 ATM
 	atmosphere_gen_temperature_min = -240 CELSIUS //-240c is about the surface temp of pluto for ref
 	atmosphere_gen_temperature_max = 450 CELSIUS //450c is the temperature at the surface of mercury for ref
+	initial_weather_state          = null // No weather.
 	possible_rock_colors           = list(
 		COLOR_BEIGE,
 		COLOR_GRAY80,
@@ -85,9 +87,6 @@
 	)
 	possible_themes = list(
 		/datum/exoplanet_theme/mountains
-	)
-	map_generators = list(
-		/datum/random_map/noise/ore/rich
 	)
 
 /datum/map_template/planetoid/random/exoplanet/barren/get_spawn_weight()

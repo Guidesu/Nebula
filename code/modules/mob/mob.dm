@@ -57,13 +57,13 @@
 	QDEL_NULL_SCREEN(zone_sel)
 
 /mob/Initialize()
-	. = ..()
 	if(ispath(skillset))
 		skillset = new skillset(src)
 	if(!move_intent)
 		move_intent = move_intents[1]
 	if(ispath(move_intent))
 		move_intent = GET_DECL(move_intent)
+	. = ..()
 	refresh_ai_handler()
 	START_PROCESSING(SSmobs, src)
 
@@ -251,10 +251,10 @@
 	return restrained() ? FULLY_BUCKLED : PARTIALLY_BUCKLED
 
 /mob/proc/is_blind()
-	return ((sdisabilities & BLINDED) || blinded || incapacitated(INCAPACITATION_KNOCKOUT))
+	return ((sdisabilities & BLINDED) || incapacitated(INCAPACITATION_KNOCKOUT) || HAS_STATUS(src, STAT_BLIND))
 
 /mob/proc/is_deaf()
-	return ((sdisabilities & DEAFENED) || incapacitated(INCAPACITATION_KNOCKOUT))
+	return ((sdisabilities & DEAFENED) || incapacitated(INCAPACITATION_KNOCKOUT) || HAS_STATUS(src, STAT_DEAF))
 
 /mob/proc/is_physically_disabled()
 	return incapacitated(INCAPACITATION_DISABLED)
@@ -393,8 +393,8 @@
 	if(!usr || !usr.client)
 		return
 
-	if((is_blind(src) || usr.stat) && !isobserver(src))
-		to_chat(src, "<span class='notice'>Something is there but you can't see it.</span>")
+	if(is_blind() && !isobserver(src))
+		to_chat(src, SPAN_WARNING("Something is there but you can't see it."))
 		return TRUE
 
 	face_atom(A)
@@ -560,9 +560,11 @@
 		return TOPIC_HANDLED
 
 	if(href_list["flavor_more"])
-		var/text = "<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY></HTML>"
-		show_browser(user, text, "window=[name];size=500x200")
-		onclose(user, "[name]")
+		var/datum/browser/popup = new(user, ckey(name), name, 500, 200)
+		var/list/html = list("<h3>Appearance</h3>")
+		html += replacetext(flavor_text, "\n", "<BR>")
+		popup.set_content(jointext(html, null))
+		popup.open()
 		return TOPIC_HANDLED
 
 // You probably do not need to override this proc. Use one of the two above.
@@ -700,14 +702,14 @@
 	if(!resting && cannot_stand() && can_stand_overridden())
 		lying = 0
 	else if(buckled)
-		anchored = 1
+		anchored = TRUE
 		if(istype(buckled))
 			if(buckled.buckle_lying == -1)
 				lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			else
 				lying = buckled.buckle_lying
 			if(buckled.buckle_movable)
-				anchored = 0
+				anchored = FALSE
 	else
 		lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 
@@ -790,7 +792,7 @@
 		if(O == implant)
 			LAZYREMOVE(pinned, O)
 		if(!LAZYLEN(pinned))
-			anchored = 0
+			anchored = FALSE
 	implant.dropInto(loc)
 	implant.add_blood(src)
 	implant.update_icon()
@@ -1049,9 +1051,6 @@
 		return TRUE
 	return FALSE
 
-/mob/proc/get_footstep(var/footstep_type)
-	return
-
 /mob/proc/handle_embedded_and_stomach_objects()
 	return
 
@@ -1061,11 +1060,14 @@
 	return 1
 
 // Let simple mobs press buttons and levers but nothing more complex.
-/mob/proc/has_dexterity(var/dex_level)
-	. = dex_level <= DEXTERITY_SIMPLE_MACHINES
+/mob/proc/get_dexterity(var/silent = FALSE)
+	var/decl/species/my_species = get_species()
+	if(my_species)
+		return my_species.get_manual_dexterity()
+	return DEXTERITY_BASE
 
-/mob/proc/check_dexterity(var/dex_level, var/silent)
-	. = has_dexterity(dex_level)
+/mob/proc/check_dexterity(var/dex_level = DEXTERITY_FULL, var/silent = FALSE)
+	. = (get_dexterity(silent) & dex_level) == dex_level
 	if(!. && !silent)
 		to_chat(src, FEEDBACK_YOU_LACK_DEXTERITY)
 
@@ -1112,7 +1114,7 @@
 	if(!QDELETED(src))
 		if(severity == 1)
 			physically_destroyed()
-		else if(!blinded)
+		else if(!is_blind())
 			flash_eyes()
 
 /mob/proc/get_telecomms_race_info()
@@ -1128,10 +1130,18 @@
 	return TRUE
 
 /mob/proc/get_species()
+	RETURN_TYPE(/decl/species)
 	return
 
 /mob/proc/get_bodytype()
+	RETURN_TYPE(/decl/bodytype)
 	return
+
+/mob/proc/has_body_flag(flag, default = FALSE)
+	var/decl/bodytype/root_bodytype = get_bodytype()
+	if(istype(root_bodytype))
+		return root_bodytype.body_flags & flag
+	return default
 
 /// Update the mouse pointer of the attached client in this mob.
 /mob/proc/update_mouse_pointer()
@@ -1320,3 +1330,26 @@
 
 /mob/proc/get_target_zone()
 	return zone_sel?.selecting
+
+/mob/proc/get_temperature_threshold(var/threshold)
+	switch(threshold)
+		if(COLD_LEVEL_1)
+			return 243
+		if(COLD_LEVEL_2)
+			return 200
+		if(COLD_LEVEL_3)
+			return 120
+		if(HEAT_LEVEL_1)
+			return 360
+		if(HEAT_LEVEL_2)
+			return 400
+		if(HEAT_LEVEL_3)
+			return 1000
+		else
+			CRASH("base get_temperature_threshold() called with invalid threshold value.")
+
+/mob/proc/get_unique_enzymes()
+	return
+
+/mob/proc/get_blood_type()
+	return
